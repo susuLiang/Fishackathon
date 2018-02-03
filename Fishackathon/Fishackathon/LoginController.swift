@@ -36,9 +36,7 @@ class LoginController: UIViewController {
 
         signInPage.isHidden = false
         signUpPage.isHidden = true
-        
-        
-
+    
     }
 
     override func didReceiveMemoryWarning() {
