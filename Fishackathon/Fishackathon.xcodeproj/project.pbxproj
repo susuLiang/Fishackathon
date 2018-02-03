@@ -12,6 +12,12 @@
 		1FE1B8A9202572AD00C79F7B /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8A6202572AD00C79F7B /* SignInController.swift */; };
 		1FE1B8AA202572AD00C79F7B /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8A7202572AD00C79F7B /* SignUpController.swift */; };
 		1FE1B8AB202572AD00C79F7B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8A8202572AD00C79F7B /* LoginController.swift */; };
+		1FE1B8AE2025854500C79F7B /* PossibleFishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8AD2025854500C79F7B /* PossibleFishesViewController.swift */; };
+		1FE1B8B02025855F00C79F7B /* PossibleFishesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE1B8AF2025855F00C79F7B /* PossibleFishesCell.xib */; };
+		1FE1B8B22025864500C79F7B /* PossibleFishesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8B12025864500C79F7B /* PossibleFishesCell.swift */; };
+		1FE1B8B420258B0500C79F7B /* PossibleFishesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE1B8B320258B0500C79F7B /* PossibleFishesViewController.xib */; };
+		1FE1B8B720258CD700C79F7B /* UINibExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8B520258CD600C79F7B /* UINibExtensions.swift */; };
+		1FE1B8B820258CD700C79F7B /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8B620258CD700C79F7B /* UIViewExtensions.swift */; };
 		1FFFAA94202558ED005F447F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFAA93202558ED005F447F /* AppDelegate.swift */; };
 		1FFFAA96202558ED005F447F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFAA95202558ED005F447F /* ViewController.swift */; };
 		1FFFAA99202558ED005F447F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFAA97202558ED005F447F /* Main.storyboard */; };
@@ -34,6 +40,12 @@
 		1FE1B8A6202572AD00C79F7B /* SignInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		1FE1B8A7202572AD00C79F7B /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		1FE1B8A8202572AD00C79F7B /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		1FE1B8AD2025854500C79F7B /* PossibleFishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossibleFishesViewController.swift; sourceTree = "<group>"; };
+		1FE1B8AF2025855F00C79F7B /* PossibleFishesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PossibleFishesCell.xib; sourceTree = "<group>"; };
+		1FE1B8B12025864500C79F7B /* PossibleFishesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossibleFishesCell.swift; sourceTree = "<group>"; };
+		1FE1B8B320258B0500C79F7B /* PossibleFishesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PossibleFishesViewController.xib; sourceTree = "<group>"; };
+		1FE1B8B520258CD600C79F7B /* UINibExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINibExtensions.swift; sourceTree = "<group>"; };
+		1FE1B8B620258CD700C79F7B /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		1FFFAA90202558ED005F447F /* Fishackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fishackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFFAA93202558ED005F447F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FFFAA95202558ED005F447F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +81,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FE1B8AC202584B400C79F7B /* PhotoRecognize */ = {
+			isa = PBXGroup;
+			children = (
+				1FE1B8AD2025854500C79F7B /* PossibleFishesViewController.swift */,
+				1FE1B8B320258B0500C79F7B /* PossibleFishesViewController.xib */,
+				1FE1B8AF2025855F00C79F7B /* PossibleFishesCell.xib */,
+				1FE1B8B12025864500C79F7B /* PossibleFishesCell.swift */,
+			);
+			path = PhotoRecognize;
+			sourceTree = "<group>";
+		};
+		1FE1B8B920258CDC00C79F7B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				1FE1B8B520258CD600C79F7B /* UINibExtensions.swift */,
+				1FE1B8B620258CD700C79F7B /* UIViewExtensions.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		1FFFAA87202558ED005F447F = {
 			isa = PBXGroup;
 			children = (
@@ -90,10 +122,12 @@
 		1FFFAA92202558ED005F447F /* Fishackathon */ = {
 			isa = PBXGroup;
 			children = (
+				1FE1B8AC202584B400C79F7B /* PhotoRecognize */,
 				5F0FFC1B2025884C00AE8D2F /* Record */,
 				5F0FFC162025880F00AE8D2F /* Input */,
 				5F0FFC0F2025856600AE8D2F /* Tab Bar */,
 				1FE1B8A4202566D800C79F7B /* GoogleService-Info.plist */,
+				1FE1B8B920258CDC00C79F7B /* Library */,
 				1FFFAA93202558ED005F447F /* AppDelegate.swift */,
 				1FFFAA95202558ED005F447F /* ViewController.swift */,
 				1FFFAA97202558ED005F447F /* Main.storyboard */,
@@ -217,11 +251,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FFFAAA1202558ED005F447F /* LaunchScreen.storyboard in Resources */,
+				1FE1B8B02025855F00C79F7B /* PossibleFishesCell.xib in Resources */,
 				379A044120255D9A00BC307B /* GoogleService-Info.plist in Resources */,
 				5F0FFC1F2025886100AE8D2F /* NewRecordViewController.xib in Resources */,
 				1FFFAA9E202558ED005F447F /* Assets.xcassets in Resources */,
 				5F0FFC1A2025883200AE8D2F /* InputOptionViewController.xib in Resources */,
 				1FFFAA99202558ED005F447F /* Main.storyboard in Resources */,
+				1FE1B8B420258B0500C79F7B /* PossibleFishesViewController.xib in Resources */,
 				1FE1B8A5202566D800C79F7B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +356,10 @@
 				1FFFAA96202558ED005F447F /* ViewController.swift in Sources */,
 				1FE1B8A9202572AD00C79F7B /* SignInController.swift in Sources */,
 				1FFFAA94202558ED005F447F /* AppDelegate.swift in Sources */,
+				1FE1B8AE2025854500C79F7B /* PossibleFishesViewController.swift in Sources */,
+				1FE1B8B820258CD700C79F7B /* UIViewExtensions.swift in Sources */,
+				1FE1B8B720258CD700C79F7B /* UINibExtensions.swift in Sources */,
+				1FE1B8B22025864500C79F7B /* PossibleFishesCell.swift in Sources */,
 				5F0FFC14202585BF00AE8D2F /* TabBarController.swift in Sources */,
 				1FFFAA9C202558ED005F447F /* Fishackathon.xcdatamodeld in Sources */,
 			);
