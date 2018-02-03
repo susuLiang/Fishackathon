@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Firebase
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,15 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        FirebaseApp.configure()
+        
+        IQKeyboardManager.sharedManager().enable = true
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         
         window?.makeKeyAndVisible()
         
-        let tabBarController = TabBarController(itemTypes: [.market, .record])
+        let rootViewController = makeEntryController()
         
-        window?.rootViewController = tabBarController
-        
-        FirebaseApp.configure()
+        window?.rootViewController = rootViewController
 
         return true
     }
@@ -97,6 +100,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
+        }
+    }
+
+    func makeEntryController() -> UIViewController {
+        if Auth.auth().currentUser?.uid == nil {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let loginController = storyboard.instantiateViewController(withIdentifier: "loginController")
+            return loginController
+        } else {
+            let tabBarController = TabBarController(itemTypes: [ .market, .record])
+            return tabBarController
         }
     }
 

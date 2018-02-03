@@ -55,13 +55,9 @@ class SignInController: UIViewController {
             self.keyChain.set(uid!, forKey: "uid")
             self.keyChain.set(email, forKey: "email")
 
-//            self.logInButton.startFinishAnimation(0.2, completion: {
-//                let tabBarController = TabBarController(itemTypes: [ .home, .map, .my, .setting])
-//                tabBarController.selectedIndex = 0
-//                self.present(tabBarController, animated: true, completion: nil)
-//                })
-//            let possibleFishesViewController = UINib.load(nibName: "PossibleFishesViewController") as! PossibleFishesViewController
-//            self.present(possibleFishesViewController, animated: true, completion: nil)
+            let tabBarController = TabBarController(itemTypes: [ .market, .record])
+            self.present(tabBarController, animated: true, completion: nil)
+
         })
     }
 

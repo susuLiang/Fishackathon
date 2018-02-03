@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,13 +26,27 @@
                             <constraint firstAttribute="height" constant="401" id="koX-zn-cXh"/>
                         </constraints>
                     </tableView>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A2M-ya-k6e">
+                        <rect key="frame" x="5" y="25" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="8kU-CX-Ups"/>
+                            <constraint firstAttribute="height" constant="50" id="kl2-tS-a7x"/>
+                        </constraints>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <state key="normal" image="icon-quit"/>
+                        <connections>
+                            <action selector="back:" destination="Fn5-gJ-XLl" eventType="touchUpInside" id="UNo-oO-MAa"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="AGT-Zv-K4g" firstAttribute="bottom" secondItem="Qfg-Eg-OCg" secondAttribute="bottom" id="AKa-03-IjQ"/>
                     <constraint firstItem="GGy-fX-tmS" firstAttribute="trailing" secondItem="Qfg-Eg-OCg" secondAttribute="trailing" id="Bls-Jk-kHI"/>
+                    <constraint firstItem="A2M-ya-k6e" firstAttribute="top" secondItem="Qfg-Eg-OCg" secondAttribute="top" constant="5" id="RDB-wL-8GZ"/>
                     <constraint firstItem="GGy-fX-tmS" firstAttribute="top" secondItem="Qfg-Eg-OCg" secondAttribute="top" id="T4K-5n-2Tv"/>
                     <constraint firstItem="AGT-Zv-K4g" firstAttribute="trailing" secondItem="Qfg-Eg-OCg" secondAttribute="trailing" id="Xiu-tY-KkN"/>
+                    <constraint firstItem="A2M-ya-k6e" firstAttribute="leading" secondItem="Qfg-Eg-OCg" secondAttribute="leading" constant="5" id="Y4R-hw-aDk"/>
                     <constraint firstItem="GGy-fX-tmS" firstAttribute="leading" secondItem="Qfg-Eg-OCg" secondAttribute="leading" id="an6-Lv-rmt"/>
                     <constraint firstItem="AGT-Zv-K4g" firstAttribute="leading" secondItem="Qfg-Eg-OCg" secondAttribute="leading" id="cW1-A7-Pqt"/>
                     <constraint firstItem="AGT-Zv-K4g" firstAttribute="top" secondItem="GGy-fX-tmS" secondAttribute="bottom" id="dtd-ca-Te1"/>
@@ -47,4 +60,7 @@
             <point key="canvasLocation" x="-93.5" y="-209.5"/>
         </viewController>
     </objects>
+    <resources>
+        <image name="icon-quit" width="32" height="32"/>
+    </resources>
 </document>
