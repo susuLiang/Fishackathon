@@ -33,18 +33,16 @@
 		5F0FFC15202585BF00AE8D2F /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC12202585BE00AE8D2F /* TabBarItem.swift */; };
 		5F0FFC192025883200AE8D2F /* InputOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC172025883200AE8D2F /* InputOptionViewController.swift */; };
 		5F0FFC1A2025883200AE8D2F /* InputOptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0FFC182025883200AE8D2F /* InputOptionViewController.xib */; };
-		5F0FFC1E2025886100AE8D2F /* NewRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC1C2025886100AE8D2F /* NewRecordViewController.swift */; };
-		5F0FFC1F2025886100AE8D2F /* NewRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0FFC1D2025886100AE8D2F /* NewRecordViewController.xib */; };
 		5F0FFC382025C09700AE8D2F /* SearchNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0FFC362025C09700AE8D2F /* SearchNameViewController.xib */; };
 		5F0FFC392025C09700AE8D2F /* SearchNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC372025C09700AE8D2F /* SearchNameViewController.swift */; };
 		5F0FFC3C2025E09100AE8D2F /* OutputTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC3B2025E09100AE8D2F /* OutputTableViewController.swift */; };
 		5F0FFC3F2025E20F00AE8D2F /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC3D2025E20F00AE8D2F /* SearchTableViewCell.swift */; };
 		5F0FFC402025E20F00AE8D2F /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0FFC3E2025E20F00AE8D2F /* SearchTableViewCell.xib */; };
 		5F0FFC422025E29100AE8D2F /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC412025E29100AE8D2F /* Identifiable.swift */; };
+		5F0FFC44202600D300AE8D2F /* PriceChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0FFC43202600D300AE8D2F /* PriceChartTableViewCell.xib */; };
 		6BE3AEFE20259DA4009ACBF1 /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE3AEFD20259DA4009ACBF1 /* PostViewController.xib */; };
 		6BE3AF0020259E0C009ACBF1 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE3AEFF20259E0C009ACBF1 /* PostViewController.swift */; };
 		6BE3AF022025B8ED009ACBF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE3AF012025B8ED009ACBF1 /* GoogleService-Info.plist */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,14 +74,13 @@
 		5F0FFC12202585BE00AE8D2F /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		5F0FFC172025883200AE8D2F /* InputOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputOptionViewController.swift; sourceTree = "<group>"; };
 		5F0FFC182025883200AE8D2F /* InputOptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputOptionViewController.xib; sourceTree = "<group>"; };
-		5F0FFC1C2025886100AE8D2F /* NewRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecordViewController.swift; sourceTree = "<group>"; };
-		5F0FFC1D2025886100AE8D2F /* NewRecordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewRecordViewController.xib; sourceTree = "<group>"; };
 		5F0FFC362025C09700AE8D2F /* SearchNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchNameViewController.xib; sourceTree = "<group>"; };
 		5F0FFC372025C09700AE8D2F /* SearchNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNameViewController.swift; sourceTree = "<group>"; };
 		5F0FFC3B2025E09100AE8D2F /* OutputTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputTableViewController.swift; sourceTree = "<group>"; };
 		5F0FFC3D2025E20F00AE8D2F /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		5F0FFC3E2025E20F00AE8D2F /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		5F0FFC412025E29100AE8D2F /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		5F0FFC43202600D300AE8D2F /* PriceChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceChartTableViewCell.xib; sourceTree = "<group>"; };
 		6BE3AEFD20259DA4009ACBF1 /* PostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostViewController.xib; sourceTree = "<group>"; };
 		6BE3AEFF20259E0C009ACBF1 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		6BE3AF012025B8ED009ACBF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -157,7 +154,6 @@
 				1FFFAA93202558ED005F447F /* AppDelegate.swift */,
 				1FE1B8BA2025A68D00C79F7B /* ChartViewController.swift */,
 				1F7117D62025AA0600B1B3E1 /* FirebaseManager.swift */,
-				1FE1B8BC2025A6AF00C79F7B /* PriceChartTableViewCell.swift */,
 				1FFFAA95202558ED005F447F /* ViewController.swift */,
 				1FFFAA97202558ED005F447F /* Main.storyboard */,
 				1FE1B8A8202572AD00C79F7B /* LoginController.swift */,
@@ -205,6 +201,8 @@
 			children = (
 				5F0FFC372025C09700AE8D2F /* SearchNameViewController.swift */,
 				5F0FFC362025C09700AE8D2F /* SearchNameViewController.xib */,
+				1FE1B8BC2025A6AF00C79F7B /* PriceChartTableViewCell.swift */,
+				5F0FFC43202600D300AE8D2F /* PriceChartTableViewCell.xib */,
 			);
 			path = SearchName;
 			sourceTree = "<group>";
@@ -308,6 +306,7 @@
 				5F0FFC1A2025883200AE8D2F /* InputOptionViewController.xib in Resources */,
 				1FFFAA99202558ED005F447F /* Main.storyboard in Resources */,
 				6BE3AF022025B8ED009ACBF1 /* GoogleService-Info.plist in Resources */,
+				5F0FFC44202600D300AE8D2F /* PriceChartTableViewCell.xib in Resources */,
 				1FE1B8B420258B0500C79F7B /* PossibleFishesViewController.xib in Resources */,
 				37F3C3722025A95B00E3D338 /* GoogleService-Info.plist in Resources */,
 			);

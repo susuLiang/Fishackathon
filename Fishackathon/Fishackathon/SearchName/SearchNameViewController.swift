@@ -8,6 +8,7 @@
 
 import UIKit
 import SearchTextField
+import Charts
 
 class SearchNameViewController: UIViewController {
     
@@ -23,8 +24,13 @@ class SearchNameViewController: UIViewController {
     
     @IBOutlet weak var scientificName: UILabel!
     
+    @IBOutlet weak var chartTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        chartTableView.delegate = self
+        chartTableView.dataSource = self
         
         setup()
         getAllFishesCommonNames()
@@ -32,6 +38,8 @@ class SearchNameViewController: UIViewController {
     }
     
     func setup() {
+        
+        chartTableView.register(UINib(nibName: "PriceChartTableViewCell", bundle: nil), forCellReuseIdentifier: "PriceChartTableViewCell")
         
         fishNameSearchTextField.theme.bgColor = .white
         
@@ -85,5 +93,24 @@ class SearchNameViewController: UIViewController {
         
     }
 
-
 }
+
+extension SearchNameViewController: UITableViewDelegate, UITableViewDataSource, ChartViewDelegate {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PriceChartTableViewCell", for: indexPath) as! PriceChartTableViewCell
+        cell.priceChart.delegate = self
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.chartTableView.bounds.height
+    }
+
+    
+}
+
