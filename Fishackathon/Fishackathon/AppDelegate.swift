@@ -27,8 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         
-        let rootViewController = makeEntryController()
+//        let rootViewController = makeEntryController()
         
+        let rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PriceChart") as! ChartViewController
+
         window?.rootViewController = rootViewController
 
         return true
