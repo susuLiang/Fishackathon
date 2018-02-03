@@ -14,16 +14,16 @@ import Foundation
 open class BarChartDataEntry: ChartDataEntry
 {
     /// the values the stacked barchart holds
-    private var _yVals: [Double]?
+    fileprivate var _yVals: [Double]?
     
     /// the ranges for the individual stack values - automatically calculated
-    private var _ranges: [Range]?
+    fileprivate var _ranges: [Range]?
     
     /// the sum of all negative values this entry (if stacked) contains
-    private var _negativeSum: Double = 0.0
+    fileprivate var _negativeSum: Double = 0.0
     
     /// the sum of all positive values this entry (if stacked) contains
-    private var _positiveSum: Double = 0.0
+    fileprivate var _positiveSum: Double = 0.0
     
     public required init()
     {
@@ -62,7 +62,17 @@ open class BarChartDataEntry: ChartDataEntry
         calcPosNegSum()
         calcRanges()
     }
-        
+    
+    /// This constructor is misleading, please use the `data` argument instead of `label`.
+    @objc @available(*, deprecated: 1.0, message: "Use `data` argument instead of `label`.")
+    public init(x: Double, yValues: [Double], label: String)
+    {
+        super.init(x: x, y: BarChartDataEntry.calcSum(values: yValues), data: label as AnyObject?)
+        self._yVals = yValues
+        calcPosNegSum()
+        calcRanges()
+    }
+    
     /// Constructor for stacked bar entries. One data object for whole stack
     @objc public init(x: Double, yValues: [Double], data: AnyObject?)
     {
@@ -92,17 +102,17 @@ open class BarChartDataEntry: ChartDataEntry
     
     @objc open func sumBelow(stackIndex :Int) -> Double
     {
-        guard let yVals = _yVals else
+        if _yVals == nil
         {
             return 0
         }
         
         var remainder: Double = 0.0
-        var index = yVals.count - 1
+        var index = _yVals!.count - 1
         
         while (index > stackIndex && index >= 0)
         {
-            remainder += yVals[index]
+            remainder += _yVals![index]
             index -= 1
         }
         
@@ -123,7 +133,7 @@ open class BarChartDataEntry: ChartDataEntry
 
     @objc open func calcPosNegSum()
     {
-        guard let _yVals = _yVals else
+        if _yVals == nil
         {
             _positiveSum = 0.0
             _negativeSum = 0.0
@@ -133,7 +143,7 @@ open class BarChartDataEntry: ChartDataEntry
         var sumNeg: Double = 0.0
         var sumPos: Double = 0.0
         
-        for f in _yVals
+        for f in _yVals!
         {
             if f < 0.0
             {
@@ -230,7 +240,7 @@ open class BarChartDataEntry: ChartDataEntry
     ///
     /// - parameter vals:
     /// - returns:
-    private static func calcSum(values: [Double]?) -> Double
+    fileprivate static func calcSum(values: [Double]?) -> Double
     {
         guard let values = values
             else { return 0.0 }

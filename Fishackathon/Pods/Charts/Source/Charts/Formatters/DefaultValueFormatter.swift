@@ -24,7 +24,7 @@ open class DefaultValueFormatter: NSObject, IValueFormatter
     
     @objc open var hasAutoDecimals: Bool = false
     
-    private var _formatter: NumberFormatter?
+    fileprivate var _formatter: NumberFormatter?
     @objc open var formatter: NumberFormatter?
     {
         get { return _formatter }
@@ -35,7 +35,7 @@ open class DefaultValueFormatter: NSObject, IValueFormatter
         }
     }
     
-    private var _decimals: Int?
+    fileprivate var _decimals: Int?
     open var decimals: Int?
     {
         get { return _decimals }
@@ -94,10 +94,14 @@ open class DefaultValueFormatter: NSObject, IValueFormatter
                              dataSetIndex: Int,
                              viewPortHandler: ViewPortHandler?) -> String
     {
-        if let block = block {
-            return block(value, entry, dataSetIndex, viewPortHandler)
-        } else {
+        if block != nil
+        {
+            return block!(value, entry, dataSetIndex, viewPortHandler)
+        }
+        else
+        {
             return formatter?.string(from: NSNumber(floatLiteral: value)) ?? ""
         }
     }
+    
 }
