@@ -80,11 +80,11 @@ class TabBarController: UITabBarController {
             
         case .record:
             
-            let newRecordViewController = NewRecordViewController()
+            let postViewController = PostViewController()
             
             let navigationController = UINavigationController(
                 
-                rootViewController: newRecordViewController
+                rootViewController: postViewController
                 
             )
             
