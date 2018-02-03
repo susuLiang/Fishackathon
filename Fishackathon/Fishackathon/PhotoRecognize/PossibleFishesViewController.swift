@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Firebase
 
 class PossibleFishesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var photo: UIImageView!
+    
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
