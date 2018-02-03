@@ -74,14 +74,8 @@ class SignUpController: UIViewController {
                 self.keyChain.set(name, forKey: "name")
                 self.keyChain.set(uid, forKey: "uid")
 
-//                self.signUpButton.startFinishAnimation(0.2, completion: {
-//                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                    guard let userSettingController = storyboard.instantiateViewController(withIdentifier: "typeSettingController") as? TypeSettingController else {
-//                        print("TypeSettingController invalid")
-//                        return
-//                    }
-//                    self.present(userSettingController, animated: true, completion: nil)
-//                })
+                let tabBarController = TabBarController(itemTypes: [ .market, .record])
+                self.present(tabBarController, animated: true, completion: nil)
             })
         })
     }
