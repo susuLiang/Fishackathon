@@ -11,6 +11,7 @@ import Firebase
 
 enum FirebaseError: Error {
     case cantGetData
+    case cantPostData
 }
 
 class FirebaseManager {
@@ -26,5 +27,6 @@ class FirebaseManager {
         }
         completion(nil, FirebaseError.cantGetData)
     }
+
 }
 
