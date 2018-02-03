@@ -14,14 +14,14 @@ struct SellData{
     let sellPrice: Double
     let time: String
     let fishCommonName: String
-    let fishImg: UIImage
+    let fishImgUrl: String
     
-    init( userName: String, sellPrice: Double, time: String, fishCommonName: String, fishImg: UIImage) {
+    init( userName: String, sellPrice: Double, time: String, fishCommonName: String, fishImgUrl: String) {
         self.userName = userName
         self.sellPrice = sellPrice
         self.time = time
         self.fishCommonName = fishCommonName
-        self.fishImg = fishImg
+        self.fishImgUrl = fishImgUrl
     }
     
 }

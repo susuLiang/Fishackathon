@@ -9,6 +9,7 @@
 import UIKit
 import KeychainSwift
 import CoreLocation
+import Firebase
 
 
 class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate{
@@ -182,23 +183,50 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             presentAlert(withTitle: "Please upload image", message: "Please upload image")
             return}
         
-        sellInfo = SellData.init(userName: userName, sellPrice: price, time: time, fishCommonName: fishCommonName, fishImg: fishImg)
+        var data = Data()
         
-        if let sellInfo = sellInfo {
-            let value: [String: Any] = [
-                "userName": sellInfo.userName,
-                "sellPrice": sellInfo.sellPrice,
-                "time": sellInfo.time,
-                "fishCommonName": sellInfo.fishCommonName,
-                "fishImg": sellInfo.fishImg]
+        data = UIImageJPEGRepresentation(fishImg, 1)!
+        
+        
+        let storageRef = Storage.storage().reference()
+        
+        let metadata = StorageMetadata()
+        
+        metadata.contentType = "image/jpg"
+        
+        storageRef.child("\(userName).jpg").putData(data, metadata: metadata) { (metadata, error) in
             
+            guard let metadata = metadata else {
+                return
+            }
             
+            guard let downloadURL = metadata.downloadURL()?.absoluteString else {return}
             
+            self.sellInfo = SellData.init(userName: userName, sellPrice: price, time: time, fishCommonName: fishCommonName, fishImgUrl: downloadURL)
             
+            if let sellInfo = self.sellInfo {
+                let value: [String: Any] = [
+                    "userName": sellInfo.userName,
+                    "sellPrice": sellInfo.sellPrice,
+                    "time": sellInfo.time,
+                    "fishCommonName": sellInfo.fishCommonName,
+                    "fishImg": sellInfo.fishImgUrl]
+                
+                DispatchQueue.global().async {
+                    
+                    let ref = Database.database().reference()
+                    let sellReference = ref.child("DealRecord").childByAutoId()
+                    
+                    sellReference.updateChildValues(value, withCompletionBlock: {(err, ref) in
+                        if err != nil {
+                            print(err)
+                            return
+                        }
+                    })
+                }
+             }
+
         }
-        
-        
-        
     }
 
 }
