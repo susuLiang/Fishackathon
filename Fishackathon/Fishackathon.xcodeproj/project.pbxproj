@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AAAE603FCF6BABE4C59F64D /* Pods_Fishackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8A3DD117D3B27E3C95777C /* Pods_Fishackathon.framework */; };
+		1F7117D72025AA0600B1B3E1 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7117D62025AA0600B1B3E1 /* FirebaseManager.swift */; };
 		1FE1B8A5202566D800C79F7B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FE1B8A4202566D800C79F7B /* GoogleService-Info.plist */; };
 		1FE1B8A9202572AD00C79F7B /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8A6202572AD00C79F7B /* SignInController.swift */; };
 		1FE1B8AA202572AD00C79F7B /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8A7202572AD00C79F7B /* SignUpController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F7117D62025AA0600B1B3E1 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		1FE1B8A4202566D800C79F7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1FE1B8A6202572AD00C79F7B /* SignInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		1FE1B8A7202572AD00C79F7B /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				1FE1B8B920258CDC00C79F7B /* Library */,
 				1FFFAA93202558ED005F447F /* AppDelegate.swift */,
 				1FE1B8BA2025A68D00C79F7B /* ChartViewController.swift */,
+				1F7117D62025AA0600B1B3E1 /* FirebaseManager.swift */,
 				1FE1B8BC2025A6AF00C79F7B /* PriceChartTableViewCell.swift */,
 				1FFFAA95202558ED005F447F /* ViewController.swift */,
 				1FFFAA97202558ED005F447F /* Main.storyboard */,
@@ -364,6 +367,7 @@
 				1FE1B8A9202572AD00C79F7B /* SignInController.swift in Sources */,
 				1FFFAA94202558ED005F447F /* AppDelegate.swift in Sources */,
 				1FE1B8AE2025854500C79F7B /* PossibleFishesViewController.swift in Sources */,
+				1F7117D72025AA0600B1B3E1 /* FirebaseManager.swift in Sources */,
 				1FE1B8B820258CD700C79F7B /* UIViewExtensions.swift in Sources */,
 				1FE1B8B720258CD700C79F7B /* UINibExtensions.swift in Sources */,
 				1FE1B8B22025864500C79F7B /* PossibleFishesCell.swift in Sources */,

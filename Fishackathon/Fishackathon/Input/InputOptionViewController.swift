@@ -53,7 +53,7 @@ class InputOptionViewController: UIViewController {
     
     @objc func searchByFishPicture() {
         fusuma.delegate = self
-        fusuma.cropHeightRatio = 0.6
+        fusuma.cropHeightRatio = 0.8
         fusuma.allowMultipleSelection = false
         self.present(fusuma, animated: true, completion: nil)
     }
@@ -101,7 +101,5 @@ extension InputOptionViewController: FusumaDelegate {
     func fusumaCameraRollUnauthorized() {
         
     }
-    
-    
     
 }
