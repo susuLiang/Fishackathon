@@ -87,7 +87,8 @@ extension InputOptionViewController: FusumaDelegate {
         }
         possibleFishesViewController.photo.image = image
         DispatchQueue.main.async {
-            self.present(possibleFishesViewController, animated: false, completion: nil)
+            self.navigationController?.pushViewController(possibleFishesViewController, animated: true)
+//            self.present(possibleFishesViewController, animated: false, completion: nil)
         }
     }
     

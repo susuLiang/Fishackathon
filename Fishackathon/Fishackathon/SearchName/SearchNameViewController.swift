@@ -26,6 +26,8 @@ class SearchNameViewController: UIViewController {
     
     @IBOutlet weak var chartTableView: UITableView!
     
+    var photoRecognizeName: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +37,13 @@ class SearchNameViewController: UIViewController {
         setup()
         getAllFishesCommonNames()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let name = photoRecognizeName {
+            scientificName.text = name
+        }
     }
     
     func setup() {
@@ -55,7 +64,7 @@ class SearchNameViewController: UIViewController {
     
     fileprivate func configureFishNameTextField() {
         // Start visible even without user's interaction as soon as created - Default: false.V
-        fishNameSearchTextField.startVisibleWithoutInteraction = true
+        fishNameSearchTextField.startVisibleWithoutInteraction = false
         
         // Set data source
         if let allFishNames = self.allFishNames {

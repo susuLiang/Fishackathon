@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AAAE603FCF6BABE4C59F64D /* Pods_Fishackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8A3DD117D3B27E3C95777C /* Pods_Fishackathon.framework */; };
+		1F5476EF20265E0A0099924C /* fish.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1F5476EE20265E0A0099924C /* fish.mlmodel */; };
 		1F7117D72025AA0600B1B3E1 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7117D62025AA0600B1B3E1 /* FirebaseManager.swift */; };
 		1FE1B8A9202572AD00C79F7B /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8A6202572AD00C79F7B /* SignInController.swift */; };
 		1FE1B8AA202572AD00C79F7B /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8A7202572AD00C79F7B /* SignUpController.swift */; };
@@ -41,10 +42,10 @@
 		6BE3AF0020259E0C009ACBF1 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE3AEFF20259E0C009ACBF1 /* PostViewController.swift */; };
 		6BE3AF022025B8ED009ACBF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE3AF012025B8ED009ACBF1 /* GoogleService-Info.plist */; };
 		6BE3AF052025DFBF009ACBF1 /* SellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE3AF042025DFBF009ACBF1 /* SellData.swift */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F5476EE20265E0A0099924C /* fish.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = fish.mlmodel; sourceTree = "<group>"; };
 		1F7117D62025AA0600B1B3E1 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		1FE1B8A6202572AD00C79F7B /* SignInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		1FE1B8A7202572AD00C79F7B /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
@@ -104,6 +105,7 @@
 				1FE1B8B320258B0500C79F7B /* PossibleFishesViewController.xib */,
 				1FE1B8AF2025855F00C79F7B /* PossibleFishesCell.xib */,
 				1FE1B8B12025864500C79F7B /* PossibleFishesCell.swift */,
+				1F5476EE20265E0A0099924C /* fish.mlmodel */,
 			);
 			path = PhotoRecognize;
 			sourceTree = "<group>";
@@ -395,6 +397,7 @@
 				1FE1B8BB2025A68D00C79F7B /* ChartViewController.swift in Sources */,
 				1FE1B8AB202572AD00C79F7B /* LoginController.swift in Sources */,
 				6BE3AF052025DFBF009ACBF1 /* SellData.swift in Sources */,
+				1F5476EF20265E0A0099924C /* fish.mlmodel in Sources */,
 				1FE1B8BD2025A6AF00C79F7B /* PriceChartTableViewCell.swift in Sources */,
 				1FFFAA96202558ED005F447F /* ViewController.swift in Sources */,
 				1FE1B8A9202572AD00C79F7B /* SignInController.swift in Sources */,

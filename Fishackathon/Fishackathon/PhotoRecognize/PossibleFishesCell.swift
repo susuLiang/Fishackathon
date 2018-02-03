@@ -10,8 +10,6 @@ import UIKit
 
 class PossibleFishesCell: UITableViewCell {
 
-    @IBOutlet weak var fishImage: UIImageView!
-    @IBOutlet weak var commonName: UILabel!
     @IBOutlet weak var scientificName: UILabel!
     
     override func awakeFromNib() {
