@@ -49,10 +49,6 @@ class InputOptionViewController: UIViewController {
         
         let searchNameViewController = SearchNameViewController()
         self.navigationController?.pushViewController(searchNameViewController, animated: true)
-        
-//        let outputTableViewController = OutputTableViewController()
-    
-//        self.navigationController?.pushViewController(outputTableViewController, animated: true)
     
     }
     
