@@ -18,6 +18,8 @@
 		1FE1B8B420258B0500C79F7B /* PossibleFishesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE1B8B320258B0500C79F7B /* PossibleFishesViewController.xib */; };
 		1FE1B8B720258CD700C79F7B /* UINibExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8B520258CD600C79F7B /* UINibExtensions.swift */; };
 		1FE1B8B820258CD700C79F7B /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8B620258CD700C79F7B /* UIViewExtensions.swift */; };
+		1FE1B8BB2025A68D00C79F7B /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8BA2025A68D00C79F7B /* ChartViewController.swift */; };
+		1FE1B8BD2025A6AF00C79F7B /* PriceChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8BC2025A6AF00C79F7B /* PriceChartTableViewCell.swift */; };
 		1FFFAA94202558ED005F447F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFAA93202558ED005F447F /* AppDelegate.swift */; };
 		1FFFAA96202558ED005F447F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFAA95202558ED005F447F /* ViewController.swift */; };
 		1FFFAA99202558ED005F447F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFAA97202558ED005F447F /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		1FE1B8B320258B0500C79F7B /* PossibleFishesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PossibleFishesViewController.xib; sourceTree = "<group>"; };
 		1FE1B8B520258CD600C79F7B /* UINibExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINibExtensions.swift; sourceTree = "<group>"; };
 		1FE1B8B620258CD700C79F7B /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		1FE1B8BA2025A68D00C79F7B /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		1FE1B8BC2025A6AF00C79F7B /* PriceChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceChartTableViewCell.swift; sourceTree = "<group>"; };
 		1FFFAA90202558ED005F447F /* Fishackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fishackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFFAA93202558ED005F447F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FFFAA95202558ED005F447F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				1FE1B8A4202566D800C79F7B /* GoogleService-Info.plist */,
 				1FE1B8B920258CDC00C79F7B /* Library */,
 				1FFFAA93202558ED005F447F /* AppDelegate.swift */,
+				1FE1B8BA2025A68D00C79F7B /* ChartViewController.swift */,
+				1FE1B8BC2025A6AF00C79F7B /* PriceChartTableViewCell.swift */,
 				1FFFAA95202558ED005F447F /* ViewController.swift */,
 				1FFFAA97202558ED005F447F /* Main.storyboard */,
 				1FE1B8A8202572AD00C79F7B /* LoginController.swift */,
@@ -351,7 +357,9 @@
 				5F0FFC13202585BF00AE8D2F /* TabBarItemType.swift in Sources */,
 				5F0FFC192025883200AE8D2F /* InputOptionViewController.swift in Sources */,
 				1FE1B8AA202572AD00C79F7B /* SignUpController.swift in Sources */,
+				1FE1B8BB2025A68D00C79F7B /* ChartViewController.swift in Sources */,
 				1FE1B8AB202572AD00C79F7B /* LoginController.swift in Sources */,
+				1FE1B8BD2025A6AF00C79F7B /* PriceChartTableViewCell.swift in Sources */,
 				1FFFAA96202558ED005F447F /* ViewController.swift in Sources */,
 				1FE1B8A9202572AD00C79F7B /* SignInController.swift in Sources */,
 				1FFFAA94202558ED005F447F /* AppDelegate.swift in Sources */,
