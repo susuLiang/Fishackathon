@@ -44,6 +44,7 @@
 		6BE3AEFE20259DA4009ACBF1 /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE3AEFD20259DA4009ACBF1 /* PostViewController.xib */; };
 		6BE3AF0020259E0C009ACBF1 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE3AEFF20259E0C009ACBF1 /* PostViewController.swift */; };
 		6BE3AF022025B8ED009ACBF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE3AF012025B8ED009ACBF1 /* GoogleService-Info.plist */; };
+		6BE3AF052025DFBF009ACBF1 /* SellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE3AF042025DFBF009ACBF1 /* SellData.swift */; };
 
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		6BE3AEFD20259DA4009ACBF1 /* PostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostViewController.xib; sourceTree = "<group>"; };
 		6BE3AEFF20259E0C009ACBF1 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		6BE3AF012025B8ED009ACBF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6BE3AF042025DFBF009ACBF1 /* SellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellData.swift; sourceTree = "<group>"; };
 		9B56B0ABF97968189F736CA0 /* Pods-Fishackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fishackathon/Pods-Fishackathon.release.xcconfig"; sourceTree = "<group>"; };
 		AC8A3DD117D3B27E3C95777C /* Pods_Fishackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fishackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -168,6 +170,7 @@
 				1FFFAAA2202558ED005F447F /* Info.plist */,
 				379A044020255D9A00BC307B /* GoogleService-Info.plist */,
 				1FFFAA9A202558ED005F447F /* Fishackathon.xcdatamodeld */,
+				6BE3AF042025DFBF009ACBF1 /* SellData.swift */,
 			);
 			path = Fishackathon;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				5F0FFC3F2025E20F00AE8D2F /* SearchTableViewCell.swift in Sources */,
 				1FE1B8BB2025A68D00C79F7B /* ChartViewController.swift in Sources */,
 				1FE1B8AB202572AD00C79F7B /* LoginController.swift in Sources */,
+				6BE3AF052025DFBF009ACBF1 /* SellData.swift in Sources */,
 				1FE1B8BD2025A6AF00C79F7B /* PriceChartTableViewCell.swift in Sources */,
 				1FFFAA96202558ED005F447F /* ViewController.swift in Sources */,
 				5F0FFC3C2025E09100AE8D2F /* OutputTableViewController.swift in Sources */,
