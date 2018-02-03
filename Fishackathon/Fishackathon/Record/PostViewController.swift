@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import KeychainSwift
+import CoreLocation
 
 
-class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate{
     
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -22,26 +24,107 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @IBOutlet weak var addPhotoButton: UIButton!
     
-    
+    @IBOutlet weak var fishCommonName: UITextField!
+   
     
     let imagePicker = UIImagePickerController()
-    
+    var locationManager:CLLocationManager!
+    var location: CLLocation?
+    let geocoder = CLGeocoder()
+    var placemark: CLPlacemark?
+    var city: String?
     let date = Date()
     let formatter = DateFormatter()
+    let timePickerView = UIDatePicker()
+    
+    let keyChain = KeychainSwift()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
         self.navigationItem.title = "Post My Fish"
         addPhotoButton.addTarget(self, action: #selector(pickImageButton), for: .touchUpInside)
-        
-        let toolBar = UIToolbar().ToolbarPiker(mySelect: #selector(dismissPicker))
-        timeTextField.inputAccessoryView = toolBar
+   
         timeTextField.addTarget(self, action: #selector(textFieldEditing), for: .editingDidBegin)
-
+        nameTextField.text = keyChain.get("name")
     }
     
-    let timePickerView = UIDatePicker()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        determineUserCurrentLocation()
+    }
+    
+    func determineUserCurrentLocation() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+            //locationManager.startUpdatingHeading()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation:CLLocation = locations[0] as CLLocation
+        
+        print("user latitude = \(userLocation.coordinate.latitude)")
+        print("user longitude = \(userLocation.coordinate.longitude)")
+        
+        let latestLocation = locations.last!
+        
+        // here check if no need to continue just return still in the same place
+        if latestLocation.horizontalAccuracy < 0 {
+            return
+        }
+        // if it location is nil or it has been moved
+        if location == nil || location!.horizontalAccuracy > latestLocation.horizontalAccuracy {
+            
+            location = latestLocation
+            // stop location manager
+            manager.stopUpdatingLocation()
+            
+            // Here is the place you want to start reverseGeocoding
+            geocoder.reverseGeocodeLocation(latestLocation, completionHandler: { (placemarks, error) in
+               
+                if error == nil, let placemark = placemarks, !placemark.isEmpty {
+                    self.placemark = placemark.last
+                }
+                self.parsePlacemarks()
+            })
+        }
+    }
+    
+    func parsePlacemarks() {
+        // here we check if location manager is not nil using a _ wild card
+        if let _ = location {
+            // unwrap the placemark
+            if let placemark = placemark {
+                
+                if let city = placemark.locality, !city.isEmpty {
+                    self.city = city
+                    print("\(city)")
+                    DispatchQueue.main.async {
+                        self.locationTextField.text = "\(city)"
+                        self.reloadInputViews()
+                    }
+                }
+            }
+            
+        } else {
+            // add some more check's if for some reason location manager is nil
+        }
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
+    {
+        print("Error \(error)")
+        manager.stopUpdatingLocation()
+        locationManager.delegate = nil
+        
+    }
     
     @objc func textFieldEditing(sender: UITextField) {
         
@@ -55,14 +138,8 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         formatter.dateFormat = "yyyy-MM-dd"
         timePickerView.maximumDate = Date()
         timeTextField.text = formatter.string(from: sender.date)
-        
     }
-    
-    @objc func dismissPicker() {
 
-        view.endEditing(true)
-
-    }
 
     @objc func pickImageButton(_ sender: Any) {
         imagePicker.allowsEditing = true
@@ -82,46 +159,62 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         dismiss(animated: true, completion: nil)
         
     }
+    
+    var sellInfo: SellData?
+    
+    @IBAction func updateSellData(_ sender: Any) {
+        
+        guard let userName = nameTextField.text else {
+            presentAlert(withTitle: "No name", message: "no name")
+            return}
+        guard let priceString = priceTextField.text else {
+            presentAlert(withTitle: "Please input price", message: "Please input price")
+            return}
+        guard let price = Double(priceString) else {
+            return}
+        guard let time = timeTextField.text else {
+            presentAlert(withTitle: "Please input time", message: "Please input time")
+            return}
+        guard let fishCommonName = fishCommonName.text else {
+            presentAlert(withTitle: "Please input fish name", message: "Please input fish name")
+            return}
+        guard let fishImg = pickerImageView.image else {
+            presentAlert(withTitle: "Please upload image", message: "Please upload image")
+            return}
+        
+        sellInfo = SellData.init(userName: userName, sellPrice: price, time: time, fishCommonName: fishCommonName, fishImg: fishImg)
+        
+        if let sellInfo = sellInfo {
+            let value: [String: Any] = [
+                "userName": sellInfo.userName,
+                "sellPrice": sellInfo.sellPrice,
+                "time": sellInfo.time,
+                "fishCommonName": sellInfo.fishCommonName,
+                "fishImg": sellInfo.fishImg]
+            
+            
+            
+            
+        }
+        
+        
+        
+    }
 
-   
 }
 
-extension PostViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+extension UIViewController {
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
+    func presentAlert(withTitle title: String, message : String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { action in
+            print("You've pressed OK Button")
+        }
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
     }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 3
-    }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-    }
-    
 }
 
-extension UIToolbar {
-    
-    func ToolbarPiker(mySelect : Selector) -> UIToolbar {
-        
-        let toolBar = UIToolbar()
-        
-        toolBar.barStyle = UIBarStyle.default
-        toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor.black
-        toolBar.sizeToFit()
-        
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: mySelect)
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        
-        toolBar.setItems([ spaceButton, doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-        
-        return toolBar
-    }
-    
-}
 
 
 

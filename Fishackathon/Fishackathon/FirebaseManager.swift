@@ -11,6 +11,7 @@ import Firebase
 
 enum FirebaseError: Error {
     case cantGetData
+    case cantPostData
 }
 
 class FirebaseManager {
@@ -26,6 +27,7 @@ class FirebaseManager {
         }
         completion(nil, FirebaseError.cantGetData)
     }
+
     
     func getAllFishesCommonNames(completion: @escaping ([String]?, Error?) -> Void) {
         Database.database().reference().child("nameCorrespond").observe(.value) { (snapshot: DataSnapshot) in
@@ -41,5 +43,6 @@ class FirebaseManager {
         }
         completion(nil, FirebaseError.cantGetData)
     }
+
 }
 
