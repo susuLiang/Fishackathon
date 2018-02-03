@@ -10,16 +10,18 @@ import UIKit
 
 class SearchNameViewController: UIViewController {
     
-    let fishNameManager = FirebaseManager()
+    var allFishNames: [String: String]? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.backgroundColor = .blue
         
-        fishNameManager.getFishesCorrespondName(fishCommonName: "Agassiz's dwarf cichlid") { (fishName, error) in
+        FirebaseManager.shared.getAllFishesCorrespondName { (data, error) in
             
-            print("OO\(fishName)")
+            self.allFishNames = data
+            
+            print("all\(self.allFishNames)")
             
         }
         

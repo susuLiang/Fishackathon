@@ -26,5 +26,15 @@ class FirebaseManager {
         }
         completion(nil, FirebaseError.cantGetData)
     }
+    
+    func getAllFishesCorrespondName(completion: @escaping ([String: String]?, Error?) -> Void) {
+        Database.database().reference().child("nameCorrespond").observe(.value) { (snapshot: DataSnapshot) in
+            if let objects = snapshot.value as? [String: String] {
+                let fishScientificName = objects
+                completion(fishScientificName, nil)
+            }
+        }
+        completion(nil, FirebaseError.cantGetData)
+    }
 }
 
