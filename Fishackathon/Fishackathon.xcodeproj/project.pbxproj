@@ -7,60 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AAAE603FCF6BABE4C59F64D /* Pods_Fishackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8A3DD117D3B27E3C95777C /* Pods_Fishackathon.framework */; };
-		1F7117D72025AA0600B1B3E1 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7117D62025AA0600B1B3E1 /* FirebaseManager.swift */; };
-		1FE1B8A9202572AD00C79F7B /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8A6202572AD00C79F7B /* SignInController.swift */; };
-		1FE1B8AA202572AD00C79F7B /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8A7202572AD00C79F7B /* SignUpController.swift */; };
-		1FE1B8AB202572AD00C79F7B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8A8202572AD00C79F7B /* LoginController.swift */; };
-		1FE1B8AE2025854500C79F7B /* PossibleFishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8AD2025854500C79F7B /* PossibleFishesViewController.swift */; };
-		1FE1B8B02025855F00C79F7B /* PossibleFishesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE1B8AF2025855F00C79F7B /* PossibleFishesCell.xib */; };
-		1FE1B8B22025864500C79F7B /* PossibleFishesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8B12025864500C79F7B /* PossibleFishesCell.swift */; };
-		1FE1B8B420258B0500C79F7B /* PossibleFishesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE1B8B320258B0500C79F7B /* PossibleFishesViewController.xib */; };
-		1FE1B8B720258CD700C79F7B /* UINibExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8B520258CD600C79F7B /* UINibExtensions.swift */; };
-		1FE1B8B820258CD700C79F7B /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8B620258CD700C79F7B /* UIViewExtensions.swift */; };
-		1FE1B8BB2025A68D00C79F7B /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8BA2025A68D00C79F7B /* ChartViewController.swift */; };
-		1FE1B8BD2025A6AF00C79F7B /* PriceChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8BC2025A6AF00C79F7B /* PriceChartTableViewCell.swift */; };
 		1FFFAA94202558ED005F447F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFAA93202558ED005F447F /* AppDelegate.swift */; };
 		1FFFAA96202558ED005F447F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFAA95202558ED005F447F /* ViewController.swift */; };
 		1FFFAA99202558ED005F447F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFAA97202558ED005F447F /* Main.storyboard */; };
 		1FFFAA9C202558ED005F447F /* Fishackathon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFAA9A202558ED005F447F /* Fishackathon.xcdatamodeld */; };
 		1FFFAA9E202558ED005F447F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFAA9D202558ED005F447F /* Assets.xcassets */; };
 		1FFFAAA1202558ED005F447F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFAA9F202558ED005F447F /* LaunchScreen.storyboard */; };
-		379A044120255D9A00BC307B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 379A044020255D9A00BC307B /* GoogleService-Info.plist */; };
-		37F3C3722025A95B00E3D338 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37F3C3712025A95B00E3D338 /* GoogleService-Info.plist */; };
-		5F0FFC13202585BF00AE8D2F /* TabBarItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC10202585BE00AE8D2F /* TabBarItemType.swift */; };
-		5F0FFC14202585BF00AE8D2F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC11202585BE00AE8D2F /* TabBarController.swift */; };
-		5F0FFC15202585BF00AE8D2F /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC12202585BE00AE8D2F /* TabBarItem.swift */; };
-		5F0FFC192025883200AE8D2F /* InputOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC172025883200AE8D2F /* InputOptionViewController.swift */; };
-		5F0FFC1A2025883200AE8D2F /* InputOptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0FFC182025883200AE8D2F /* InputOptionViewController.xib */; };
-		5F0FFC1E2025886100AE8D2F /* NewRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC1C2025886100AE8D2F /* NewRecordViewController.swift */; };
-		5F0FFC1F2025886100AE8D2F /* NewRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0FFC1D2025886100AE8D2F /* NewRecordViewController.xib */; };
-		5F0FFC382025C09700AE8D2F /* SearchNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0FFC362025C09700AE8D2F /* SearchNameViewController.xib */; };
-		5F0FFC392025C09700AE8D2F /* SearchNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC372025C09700AE8D2F /* SearchNameViewController.swift */; };
-		5F0FFC3C2025E09100AE8D2F /* OutputTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC3B2025E09100AE8D2F /* OutputTableViewController.swift */; };
-		5F0FFC3F2025E20F00AE8D2F /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC3D2025E20F00AE8D2F /* SearchTableViewCell.swift */; };
-		5F0FFC402025E20F00AE8D2F /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0FFC3E2025E20F00AE8D2F /* SearchTableViewCell.xib */; };
-		5F0FFC422025E29100AE8D2F /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC412025E29100AE8D2F /* Identifiable.swift */; };
-		6BE3AEFE20259DA4009ACBF1 /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE3AEFD20259DA4009ACBF1 /* PostViewController.xib */; };
-		6BE3AF0020259E0C009ACBF1 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE3AEFF20259E0C009ACBF1 /* PostViewController.swift */; };
-		6BE3AF022025B8ED009ACBF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE3AF012025B8ED009ACBF1 /* GoogleService-Info.plist */; };
-		6BE3AF052025DFBF009ACBF1 /* SellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE3AF042025DFBF009ACBF1 /* SellData.swift */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F7117D62025AA0600B1B3E1 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
-		1FE1B8A6202572AD00C79F7B /* SignInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
-		1FE1B8A7202572AD00C79F7B /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
-		1FE1B8A8202572AD00C79F7B /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		1FE1B8AD2025854500C79F7B /* PossibleFishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossibleFishesViewController.swift; sourceTree = "<group>"; };
-		1FE1B8AF2025855F00C79F7B /* PossibleFishesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PossibleFishesCell.xib; sourceTree = "<group>"; };
-		1FE1B8B12025864500C79F7B /* PossibleFishesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossibleFishesCell.swift; sourceTree = "<group>"; };
-		1FE1B8B320258B0500C79F7B /* PossibleFishesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PossibleFishesViewController.xib; sourceTree = "<group>"; };
-		1FE1B8B520258CD600C79F7B /* UINibExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINibExtensions.swift; sourceTree = "<group>"; };
-		1FE1B8B620258CD700C79F7B /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
-		1FE1B8BA2025A68D00C79F7B /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
-		1FE1B8BC2025A6AF00C79F7B /* PriceChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceChartTableViewCell.swift; sourceTree = "<group>"; };
 		1FFFAA90202558ED005F447F /* Fishackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fishackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFFAA93202558ED005F447F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FFFAA95202558ED005F447F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,28 +24,6 @@
 		1FFFAA9D202558ED005F447F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FFFAAA0202558ED005F447F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FFFAAA2202558ED005F447F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D6E39777433863E8293C74E /* Pods-Fishackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fishackathon/Pods-Fishackathon.debug.xcconfig"; sourceTree = "<group>"; };
-		379A044020255D9A00BC307B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		37F3C3712025A95B00E3D338 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		5F0FFC10202585BE00AE8D2F /* TabBarItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItemType.swift; sourceTree = "<group>"; };
-		5F0FFC11202585BE00AE8D2F /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		5F0FFC12202585BE00AE8D2F /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
-		5F0FFC172025883200AE8D2F /* InputOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputOptionViewController.swift; sourceTree = "<group>"; };
-		5F0FFC182025883200AE8D2F /* InputOptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputOptionViewController.xib; sourceTree = "<group>"; };
-		5F0FFC1C2025886100AE8D2F /* NewRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecordViewController.swift; sourceTree = "<group>"; };
-		5F0FFC1D2025886100AE8D2F /* NewRecordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewRecordViewController.xib; sourceTree = "<group>"; };
-		5F0FFC362025C09700AE8D2F /* SearchNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchNameViewController.xib; sourceTree = "<group>"; };
-		5F0FFC372025C09700AE8D2F /* SearchNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNameViewController.swift; sourceTree = "<group>"; };
-		5F0FFC3B2025E09100AE8D2F /* OutputTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputTableViewController.swift; sourceTree = "<group>"; };
-		5F0FFC3D2025E20F00AE8D2F /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
-		5F0FFC3E2025E20F00AE8D2F /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
-		5F0FFC412025E29100AE8D2F /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
-		6BE3AEFD20259DA4009ACBF1 /* PostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostViewController.xib; sourceTree = "<group>"; };
-		6BE3AEFF20259E0C009ACBF1 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		6BE3AF012025B8ED009ACBF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		6BE3AF042025DFBF009ACBF1 /* SellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellData.swift; sourceTree = "<group>"; };
-		9B56B0ABF97968189F736CA0 /* Pods-Fishackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fishackathon/Pods-Fishackathon.release.xcconfig"; sourceTree = "<group>"; };
-		AC8A3DD117D3B27E3C95777C /* Pods_Fishackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fishackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,41 +31,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AAAE603FCF6BABE4C59F64D /* Pods_Fishackathon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FE1B8AC202584B400C79F7B /* PhotoRecognize */ = {
-			isa = PBXGroup;
-			children = (
-				1FE1B8AD2025854500C79F7B /* PossibleFishesViewController.swift */,
-				1FE1B8B320258B0500C79F7B /* PossibleFishesViewController.xib */,
-				1FE1B8AF2025855F00C79F7B /* PossibleFishesCell.xib */,
-				1FE1B8B12025864500C79F7B /* PossibleFishesCell.swift */,
-			);
-			path = PhotoRecognize;
-			sourceTree = "<group>";
-		};
-		1FE1B8B920258CDC00C79F7B /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				1FE1B8B520258CD600C79F7B /* UINibExtensions.swift */,
-				1FE1B8B620258CD700C79F7B /* UIViewExtensions.swift */,
-				5F0FFC412025E29100AE8D2F /* Identifiable.swift */,
-			);
-			path = Library;
-			sourceTree = "<group>";
-		};
 		1FFFAA87202558ED005F447F = {
 			isa = PBXGroup;
 			children = (
 				1FFFAA92202558ED005F447F /* Fishackathon */,
 				1FFFAA91202558ED005F447F /* Products */,
-				A8E7DBFB88125ABEFFD110BB /* Pods */,
-				BBDD11A108F08123D1A34115 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,96 +56,15 @@
 		1FFFAA92202558ED005F447F /* Fishackathon */ = {
 			isa = PBXGroup;
 			children = (
-				5F0FFC3A2025E06B00AE8D2F /* Output */,
-				5F0FFC352025C08100AE8D2F /* SearchName */,
-				1FE1B8AC202584B400C79F7B /* PhotoRecognize */,
-				5F0FFC1B2025884C00AE8D2F /* Record */,
-				5F0FFC162025880F00AE8D2F /* Input */,
-				6BE3AF012025B8ED009ACBF1 /* GoogleService-Info.plist */,
-				5F0FFC0F2025856600AE8D2F /* Tab Bar */,
-				37F3C3712025A95B00E3D338 /* GoogleService-Info.plist */,
-				1FE1B8B920258CDC00C79F7B /* Library */,
 				1FFFAA93202558ED005F447F /* AppDelegate.swift */,
-				1FE1B8BA2025A68D00C79F7B /* ChartViewController.swift */,
-				1F7117D62025AA0600B1B3E1 /* FirebaseManager.swift */,
-				1FE1B8BC2025A6AF00C79F7B /* PriceChartTableViewCell.swift */,
 				1FFFAA95202558ED005F447F /* ViewController.swift */,
 				1FFFAA97202558ED005F447F /* Main.storyboard */,
-				1FE1B8A8202572AD00C79F7B /* LoginController.swift */,
-				1FE1B8A6202572AD00C79F7B /* SignInController.swift */,
-				1FE1B8A7202572AD00C79F7B /* SignUpController.swift */,
 				1FFFAA9D202558ED005F447F /* Assets.xcassets */,
 				1FFFAA9F202558ED005F447F /* LaunchScreen.storyboard */,
 				1FFFAAA2202558ED005F447F /* Info.plist */,
-				379A044020255D9A00BC307B /* GoogleService-Info.plist */,
 				1FFFAA9A202558ED005F447F /* Fishackathon.xcdatamodeld */,
-				6BE3AF042025DFBF009ACBF1 /* SellData.swift */,
 			);
 			path = Fishackathon;
-			sourceTree = "<group>";
-		};
-		5F0FFC0F2025856600AE8D2F /* Tab Bar */ = {
-			isa = PBXGroup;
-			children = (
-				5F0FFC11202585BE00AE8D2F /* TabBarController.swift */,
-				5F0FFC12202585BE00AE8D2F /* TabBarItem.swift */,
-				5F0FFC10202585BE00AE8D2F /* TabBarItemType.swift */,
-			);
-			path = "Tab Bar";
-			sourceTree = "<group>";
-		};
-		5F0FFC162025880F00AE8D2F /* Input */ = {
-			isa = PBXGroup;
-			children = (
-				5F0FFC172025883200AE8D2F /* InputOptionViewController.swift */,
-				5F0FFC182025883200AE8D2F /* InputOptionViewController.xib */,
-			);
-			path = Input;
-			sourceTree = "<group>";
-		};
-		5F0FFC1B2025884C00AE8D2F /* Record */ = {
-			isa = PBXGroup;
-			children = (
-				6BE3AEFF20259E0C009ACBF1 /* PostViewController.swift */,
-				6BE3AEFD20259DA4009ACBF1 /* PostViewController.xib */,
-			);
-			path = Record;
-			sourceTree = "<group>";
-		};
-		5F0FFC352025C08100AE8D2F /* SearchName */ = {
-			isa = PBXGroup;
-			children = (
-				5F0FFC372025C09700AE8D2F /* SearchNameViewController.swift */,
-				5F0FFC362025C09700AE8D2F /* SearchNameViewController.xib */,
-			);
-			path = SearchName;
-			sourceTree = "<group>";
-		};
-		5F0FFC3A2025E06B00AE8D2F /* Output */ = {
-			isa = PBXGroup;
-			children = (
-				5F0FFC3B2025E09100AE8D2F /* OutputTableViewController.swift */,
-				5F0FFC3D2025E20F00AE8D2F /* SearchTableViewCell.swift */,
-				5F0FFC3E2025E20F00AE8D2F /* SearchTableViewCell.xib */,
-			);
-			path = Output;
-			sourceTree = "<group>";
-		};
-		A8E7DBFB88125ABEFFD110BB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2D6E39777433863E8293C74E /* Pods-Fishackathon.debug.xcconfig */,
-				9B56B0ABF97968189F736CA0 /* Pods-Fishackathon.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		BBDD11A108F08123D1A34115 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AC8A3DD117D3B27E3C95777C /* Pods_Fishackathon.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,12 +74,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FFFAAA5202558ED005F447F /* Build configuration list for PBXNativeTarget "Fishackathon" */;
 			buildPhases = (
-				6D66737AA05A9AF9A72A375D /* [CP] Check Pods Manifest.lock */,
 				1FFFAA8C202558ED005F447F /* Sources */,
 				1FFFAA8D202558ED005F447F /* Frameworks */,
 				1FFFAA8E202558ED005F447F /* Resources */,
-				61DF0AB91A0923DC72542E37 /* [CP] Embed Pods Frameworks */,
-				89D0FAAAC8B05287D5A93613 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,131 +127,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FFFAAA1202558ED005F447F /* LaunchScreen.storyboard in Resources */,
-				1FE1B8B02025855F00C79F7B /* PossibleFishesCell.xib in Resources */,
-				379A044120255D9A00BC307B /* GoogleService-Info.plist in Resources */,
-				6BE3AEFE20259DA4009ACBF1 /* PostViewController.xib in Resources */,
 				1FFFAA9E202558ED005F447F /* Assets.xcassets in Resources */,
-				5F0FFC402025E20F00AE8D2F /* SearchTableViewCell.xib in Resources */,
-				5F0FFC382025C09700AE8D2F /* SearchNameViewController.xib in Resources */,
-				5F0FFC1A2025883200AE8D2F /* InputOptionViewController.xib in Resources */,
 				1FFFAA99202558ED005F447F /* Main.storyboard in Resources */,
-				6BE3AF022025B8ED009ACBF1 /* GoogleService-Info.plist in Resources */,
-				1FE1B8B420258B0500C79F7B /* PossibleFishesViewController.xib in Resources */,
-				37F3C3722025A95B00E3D338 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		61DF0AB91A0923DC72542E37 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Fishackathon/Pods-Fishackathon-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
-				"${BUILT_PRODUCTS_DIR}/Fusuma/Fusuma.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
-				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
-				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
-				"${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fusuma.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SearchTextField.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fishackathon/Pods-Fishackathon-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6D66737AA05A9AF9A72A375D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Fishackathon-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		89D0FAAAC8B05287D5A93613 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Fishackathon/Pods-Fishackathon-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fishackathon/Pods-Fishackathon-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1FFFAA8C202558ED005F447F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F0FFC15202585BF00AE8D2F /* TabBarItem.swift in Sources */,
-				5F0FFC13202585BF00AE8D2F /* TabBarItemType.swift in Sources */,
-				5F0FFC192025883200AE8D2F /* InputOptionViewController.swift in Sources */,
-				1FE1B8AA202572AD00C79F7B /* SignUpController.swift in Sources */,
-				5F0FFC392025C09700AE8D2F /* SearchNameViewController.swift in Sources */,
-				5F0FFC3F2025E20F00AE8D2F /* SearchTableViewCell.swift in Sources */,
-				1FE1B8BB2025A68D00C79F7B /* ChartViewController.swift in Sources */,
-				1FE1B8AB202572AD00C79F7B /* LoginController.swift in Sources */,
-				6BE3AF052025DFBF009ACBF1 /* SellData.swift in Sources */,
-				1FE1B8BD2025A6AF00C79F7B /* PriceChartTableViewCell.swift in Sources */,
 				1FFFAA96202558ED005F447F /* ViewController.swift in Sources */,
-				5F0FFC3C2025E09100AE8D2F /* OutputTableViewController.swift in Sources */,
-				1FE1B8A9202572AD00C79F7B /* SignInController.swift in Sources */,
-				6BE3AF0020259E0C009ACBF1 /* PostViewController.swift in Sources */,
 				1FFFAA94202558ED005F447F /* AppDelegate.swift in Sources */,
-				1FE1B8AE2025854500C79F7B /* PossibleFishesViewController.swift in Sources */,
-				1F7117D72025AA0600B1B3E1 /* FirebaseManager.swift in Sources */,
-				1FE1B8B820258CD700C79F7B /* UIViewExtensions.swift in Sources */,
-				1FE1B8B720258CD700C79F7B /* UINibExtensions.swift in Sources */,
-				1FE1B8B22025864500C79F7B /* PossibleFishesCell.swift in Sources */,
-				5F0FFC422025E29100AE8D2F /* Identifiable.swift in Sources */,
-				5F0FFC14202585BF00AE8D2F /* TabBarController.swift in Sources */,
 				1FFFAA9C202558ED005F447F /* Fishackathon.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,7 +215,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -552,7 +266,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -562,7 +276,6 @@
 		};
 		1FFFAAA6202558ED005F447F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D6E39777433863E8293C74E /* Pods-Fishackathon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -578,7 +291,6 @@
 		};
 		1FFFAAA7202558ED005F447F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B56B0ABF97968189F736CA0 /* Pods-Fishackathon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
