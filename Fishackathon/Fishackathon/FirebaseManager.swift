@@ -26,5 +26,20 @@ class FirebaseManager {
         }
         completion(nil, FirebaseError.cantGetData)
     }
+    
+    func getAllFishesCommonNames(completion: @escaping ([String]?, Error?) -> Void) {
+        Database.database().reference().child("nameCorrespond").observe(.value) { (snapshot: DataSnapshot) in
+            
+            var fishCommonNames: [String] = []
+            
+            if let objects = snapshot.value as? [String: String] {
+                for fishCommonName in objects.keys {
+                    fishCommonNames.append(fishCommonName)
+                }
+            }
+            completion(fishCommonNames, nil)
+        }
+        completion(nil, FirebaseError.cantGetData)
+    }
 }
 
