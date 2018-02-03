@@ -13,6 +13,7 @@
 		1FFFAA9C202558ED005F447F /* Fishackathon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFAA9A202558ED005F447F /* Fishackathon.xcdatamodeld */; };
 		1FFFAA9E202558ED005F447F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFAA9D202558ED005F447F /* Assets.xcassets */; };
 		1FFFAAA1202558ED005F447F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFAA9F202558ED005F447F /* LaunchScreen.storyboard */; };
+		379A044120255D9A00BC307B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 379A044020255D9A00BC307B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1FFFAA9D202558ED005F447F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FFFAAA0202558ED005F447F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FFFAAA2202558ED005F447F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		379A044020255D9A00BC307B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		1FFFAA92202558ED005F447F /* Fishackathon */ = {
 			isa = PBXGroup;
 			children = (
+				379A044020255D9A00BC307B /* GoogleService-Info.plist */,
 				1FFFAA93202558ED005F447F /* AppDelegate.swift */,
 				1FFFAA95202558ED005F447F /* ViewController.swift */,
 				1FFFAA97202558ED005F447F /* Main.storyboard */,
@@ -127,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FFFAAA1202558ED005F447F /* LaunchScreen.storyboard in Resources */,
+				379A044120255D9A00BC307B /* GoogleService-Info.plist in Resources */,
 				1FFFAA9E202558ED005F447F /* Assets.xcassets in Resources */,
 				1FFFAA99202558ED005F447F /* Main.storyboard in Resources */,
 			);
