@@ -13,6 +13,7 @@ import CoreLocation
 
 
 class PriceChartTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var priceChart: CombinedChartView!
     
     override func awakeFromNib() {
