@@ -7,21 +7,79 @@
 //
 
 import UIKit
+import SearchTextField
 
 class SearchNameViewController: UIViewController {
     
-    var allFishNames: [String: String]? = nil
+    // MARK: Properties
+    
+    var allFishNames: [String]? = nil {
+        didSet {
+            configureFishNameTextField()
+        }
+    }
+    
+    @IBOutlet weak var fishNameSearchTextField: SearchTextField!
+    
+    @IBOutlet weak var scientificName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.view.backgroundColor = .blue
         
-        FirebaseManager.shared.getAllFishesCorrespondName { (data, error) in
-            
+        setup()
+        getAllFishesCommonNames()
+        
+    }
+    
+    func setup() {
+        
+        fishNameSearchTextField.theme.bgColor = .white
+        
+        fishNameSearchTextField.addTarget(self, action: #selector(search), for: .editingDidEnd)
+        
+    }
+    
+    func getAllFishesCommonNames() {
+        FirebaseManager.shared.getAllFishesCommonNames { (data, error) in
             self.allFishNames = data
+        }
+    }
+    
+    fileprivate func configureFishNameTextField() {
+        // Start visible even without user's interaction as soon as created - Default: false.V
+        fishNameSearchTextField.startVisibleWithoutInteraction = true
+        
+        // Set data source
+        if let allFishNames = self.allFishNames {
+            fishNameSearchTextField.filterStrings(allFishNames)
+        }
+
+    }
+    
+    @objc func search() {
+        
+        if let commonName = fishNameSearchTextField.text {
             
-            print("all\(self.allFishNames)")
+            FirebaseManager.shared.getFishesCorrespondName(fishCommonName: commonName, completion: { (data, error) in
+                
+                if let error = error {
+                    
+                    print("invalid fish common name \(error)")
+                
+                    return
+                }
+                
+                guard let data = data else {
+                    
+                    print("data not exist")
+                    
+                    return
+                }
+                
+                self.scientificName.text = data
+                
+            })
+            
             
         }
         
