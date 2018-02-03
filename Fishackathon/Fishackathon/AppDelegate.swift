@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootViewController = makeEntryController()
         
 //        let rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PriceChart") as! ChartViewController
-//
+
         window?.rootViewController = rootViewController
 
         return true
