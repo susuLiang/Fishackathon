@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="mkz-ec-9Ql" customClass="PossibleFishesCell" customModule="Fishackathon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="472" height="85"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mkz-ec-9Ql" id="rfa-OV-NRI">
+                <rect key="frame" x="0.0" y="0.0" width="472" height="84.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tn6-sp-AmG">
+                        <rect key="frame" x="20" y="17.5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="Sfb-gt-xmS"/>
+                            <constraint firstAttribute="width" secondItem="tn6-sp-AmG" secondAttribute="height" multiplier="1:1" id="uRH-mF-XLc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abI-bz-8Ut">
+                        <rect key="frame" x="100" y="17.5" width="322" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i08-Mg-m44">
+                        <rect key="frame" x="100" y="46.5" width="322" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="abI-bz-8Ut" firstAttribute="leading" secondItem="tn6-sp-AmG" secondAttribute="trailing" constant="30" id="2bh-py-efd"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="abI-bz-8Ut" secondAttribute="trailing" constant="30" id="Yo5-to-dJC"/>
+                    <constraint firstItem="i08-Mg-m44" firstAttribute="bottom" secondItem="tn6-sp-AmG" secondAttribute="bottom" id="ajf-sW-UOu"/>
+                    <constraint firstItem="i08-Mg-m44" firstAttribute="trailing" secondItem="abI-bz-8Ut" secondAttribute="trailing" id="eMR-k8-bhO"/>
+                    <constraint firstItem="i08-Mg-m44" firstAttribute="leading" secondItem="abI-bz-8Ut" secondAttribute="leading" id="kqr-dC-dEp"/>
+                    <constraint firstItem="abI-bz-8Ut" firstAttribute="top" secondItem="tn6-sp-AmG" secondAttribute="top" id="n1y-pa-S7G"/>
+                    <constraint firstItem="tn6-sp-AmG" firstAttribute="centerY" secondItem="rfa-OV-NRI" secondAttribute="centerY" id="w9C-Iu-aIo"/>
+                    <constraint firstItem="tn6-sp-AmG" firstAttribute="leading" secondItem="rfa-OV-NRI" secondAttribute="leading" constant="20" id="zdz-hj-bro"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="commonName" destination="abI-bz-8Ut" id="ASe-db-KsS"/>
+                <outlet property="fishImage" destination="tn6-sp-AmG" id="eN3-uT-XWD"/>
+                <outlet property="scientificName" destination="i08-Mg-m44" id="1xF-N2-nN8"/>
+            </connections>
+            <point key="canvasLocation" x="513" y="311.5"/>
+        </tableViewCell>
+    </objects>
+</document>
