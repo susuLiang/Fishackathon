@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AAAE603FCF6BABE4C59F64D /* Pods_Fishackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8A3DD117D3B27E3C95777C /* Pods_Fishackathon.framework */; };
 		1FFFAA94202558ED005F447F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFAA93202558ED005F447F /* AppDelegate.swift */; };
 		1FFFAA96202558ED005F447F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFAA95202558ED005F447F /* ViewController.swift */; };
 		1FFFAA99202558ED005F447F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFAA97202558ED005F447F /* Main.storyboard */; };
@@ -25,7 +26,10 @@
 		1FFFAA9D202558ED005F447F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FFFAAA0202558ED005F447F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FFFAAA2202558ED005F447F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D6E39777433863E8293C74E /* Pods-Fishackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fishackathon/Pods-Fishackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		379A044020255D9A00BC307B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9B56B0ABF97968189F736CA0 /* Pods-Fishackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fishackathon/Pods-Fishackathon.release.xcconfig"; sourceTree = "<group>"; };
+		AC8A3DD117D3B27E3C95777C /* Pods_Fishackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fishackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AAAE603FCF6BABE4C59F64D /* Pods_Fishackathon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				1FFFAA92202558ED005F447F /* Fishackathon */,
 				1FFFAA91202558ED005F447F /* Products */,
+				A8E7DBFB88125ABEFFD110BB /* Pods */,
+				BBDD11A108F08123D1A34115 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,23 @@
 			path = Fishackathon;
 			sourceTree = "<group>";
 		};
+		A8E7DBFB88125ABEFFD110BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E39777433863E8293C74E /* Pods-Fishackathon.debug.xcconfig */,
+				9B56B0ABF97968189F736CA0 /* Pods-Fishackathon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BBDD11A108F08123D1A34115 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC8A3DD117D3B27E3C95777C /* Pods_Fishackathon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FFFAAA5202558ED005F447F /* Build configuration list for PBXNativeTarget "Fishackathon" */;
 			buildPhases = (
+				6D66737AA05A9AF9A72A375D /* [CP] Check Pods Manifest.lock */,
 				1FFFAA8C202558ED005F447F /* Sources */,
 				1FFFAA8D202558ED005F447F /* Frameworks */,
 				1FFFAA8E202558ED005F447F /* Resources */,
+				61DF0AB91A0923DC72542E37 /* [CP] Embed Pods Frameworks */,
+				89D0FAAAC8B05287D5A93613 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,6 +164,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61DF0AB91A0923DC72542E37 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Fishackathon/Pods-Fishackathon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fishackathon/Pods-Fishackathon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D66737AA05A9AF9A72A375D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fishackathon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89D0FAAAC8B05287D5A93613 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fishackathon/Pods-Fishackathon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1FFFAA8C202558ED005F447F /* Sources */ = {
@@ -280,6 +361,7 @@
 		};
 		1FFFAAA6202558ED005F447F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D6E39777433863E8293C74E /* Pods-Fishackathon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +377,7 @@
 		};
 		1FFFAAA7202558ED005F447F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B56B0ABF97968189F736CA0 /* Pods-Fishackathon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
