@@ -33,12 +33,20 @@ class InputOptionViewController: UIViewController {
         
         fishNameButton.addTarget(self, action: #selector(searchByFishName), for: .touchUpInside)
         
+        fishPictureButton.addTarget(self, action: #selector(searchByFishPicture), for: .touchUpInside)
+        
     }
     
     @objc func searchByFishName() {
         
         print("123")
     
+    }
+    
+    @objc func searchByFishPicture() {
+        
+        print("picture")
+        
     }
     
 }
