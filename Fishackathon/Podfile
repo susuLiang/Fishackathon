@@ -20,4 +20,5 @@ target 'Fishackathon' do
   pod 'IQKeyboardManagerSwift'
   pod 'SCLAlertView', :git => 'https://github.com/vikmeup/SCLAlertView-Swift', :branch => 'master'
   pod 'Fusuma'
+  pod "SearchTextField"
 end
