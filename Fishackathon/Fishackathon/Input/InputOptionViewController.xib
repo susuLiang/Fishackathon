@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputOptionViewController" customModule="Fishackathon" customModuleProvider="target">
+            <connections>
+                <outlet property="fishNameButton" destination="c78-8R-SWb" id="YuF-9U-fhN"/>
+                <outlet property="fishPictureButton" destination="qJG-mI-EwS" id="MnT-qb-bEo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Fish Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FC-NA-HcC">
+                    <rect key="frame" x="63" y="192" width="249" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c78-8R-SWb">
+                    <rect key="frame" x="127" y="300" width="120" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="By Fish Name"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJG-mI-EwS">
+                    <rect key="frame" x="123" y="361" width="129" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="By Fish Picture"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="0FC-NA-HcC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GGC-vY-wkd"/>
+                <constraint firstItem="qJG-mI-EwS" firstAttribute="top" secondItem="c78-8R-SWb" secondAttribute="bottom" constant="25" id="GR4-vN-SI4"/>
+                <constraint firstItem="qJG-mI-EwS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Z0S-RR-6VW"/>
+                <constraint firstItem="c78-8R-SWb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cVp-yR-Nu3"/>
+                <constraint firstItem="0FC-NA-HcC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="172" id="gbk-SE-viu"/>
+                <constraint firstItem="c78-8R-SWb" firstAttribute="top" secondItem="0FC-NA-HcC" secondAttribute="bottom" constant="60" id="hBy-Vt-fEt"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
