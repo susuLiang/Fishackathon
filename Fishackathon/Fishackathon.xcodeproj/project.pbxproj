@@ -36,6 +36,8 @@
 		5F0FFC1A2025883200AE8D2F /* InputOptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0FFC182025883200AE8D2F /* InputOptionViewController.xib */; };
 		5F0FFC1E2025886100AE8D2F /* NewRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC1C2025886100AE8D2F /* NewRecordViewController.swift */; };
 		5F0FFC1F2025886100AE8D2F /* NewRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0FFC1D2025886100AE8D2F /* NewRecordViewController.xib */; };
+		5F0FFC382025C09700AE8D2F /* SearchNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0FFC362025C09700AE8D2F /* SearchNameViewController.xib */; };
+		5F0FFC392025C09700AE8D2F /* SearchNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC372025C09700AE8D2F /* SearchNameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		5F0FFC182025883200AE8D2F /* InputOptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputOptionViewController.xib; sourceTree = "<group>"; };
 		5F0FFC1C2025886100AE8D2F /* NewRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecordViewController.swift; sourceTree = "<group>"; };
 		5F0FFC1D2025886100AE8D2F /* NewRecordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewRecordViewController.xib; sourceTree = "<group>"; };
+		5F0FFC362025C09700AE8D2F /* SearchNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchNameViewController.xib; sourceTree = "<group>"; };
+		5F0FFC372025C09700AE8D2F /* SearchNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNameViewController.swift; sourceTree = "<group>"; };
 		9B56B0ABF97968189F736CA0 /* Pods-Fishackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fishackathon/Pods-Fishackathon.release.xcconfig"; sourceTree = "<group>"; };
 		AC8A3DD117D3B27E3C95777C /* Pods_Fishackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fishackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,6 +131,7 @@
 		1FFFAA92202558ED005F447F /* Fishackathon */ = {
 			isa = PBXGroup;
 			children = (
+				5F0FFC352025C08100AE8D2F /* SearchName */,
 				1FE1B8AC202584B400C79F7B /* PhotoRecognize */,
 				5F0FFC1B2025884C00AE8D2F /* Record */,
 				5F0FFC162025880F00AE8D2F /* Input */,
@@ -178,6 +183,15 @@
 				5F0FFC1D2025886100AE8D2F /* NewRecordViewController.xib */,
 			);
 			path = Record;
+			sourceTree = "<group>";
+		};
+		5F0FFC352025C08100AE8D2F /* SearchName */ = {
+			isa = PBXGroup;
+			children = (
+				5F0FFC372025C09700AE8D2F /* SearchNameViewController.swift */,
+				5F0FFC362025C09700AE8D2F /* SearchNameViewController.xib */,
+			);
+			path = SearchName;
 			sourceTree = "<group>";
 		};
 		A8E7DBFB88125ABEFFD110BB /* Pods */ = {
@@ -264,6 +278,7 @@
 				379A044120255D9A00BC307B /* GoogleService-Info.plist in Resources */,
 				5F0FFC1F2025886100AE8D2F /* NewRecordViewController.xib in Resources */,
 				1FFFAA9E202558ED005F447F /* Assets.xcassets in Resources */,
+				5F0FFC382025C09700AE8D2F /* SearchNameViewController.xib in Resources */,
 				5F0FFC1A2025883200AE8D2F /* InputOptionViewController.xib in Resources */,
 				1FFFAA99202558ED005F447F /* Main.storyboard in Resources */,
 				1FE1B8B420258B0500C79F7B /* PossibleFishesViewController.xib in Resources */,
@@ -364,6 +379,7 @@
 				5F0FFC13202585BF00AE8D2F /* TabBarItemType.swift in Sources */,
 				5F0FFC192025883200AE8D2F /* InputOptionViewController.swift in Sources */,
 				1FE1B8AA202572AD00C79F7B /* SignUpController.swift in Sources */,
+				5F0FFC392025C09700AE8D2F /* SearchNameViewController.swift in Sources */,
 				1FE1B8BB2025A68D00C79F7B /* ChartViewController.swift in Sources */,
 				1FE1B8AB202572AD00C79F7B /* LoginController.swift in Sources */,
 				1FE1B8BD2025A6AF00C79F7B /* PriceChartTableViewCell.swift in Sources */,

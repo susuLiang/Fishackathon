@@ -47,7 +47,9 @@ class InputOptionViewController: UIViewController {
     
     @objc func searchByFishName() {
         
-        print("123")
+        let searchNameViewController = SearchNameViewController()
+        
+        self.navigationController?.pushViewController(searchNameViewController, animated: true)
     
     }
     
