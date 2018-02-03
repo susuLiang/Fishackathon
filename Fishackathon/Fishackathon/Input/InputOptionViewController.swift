@@ -47,9 +47,12 @@ class InputOptionViewController: UIViewController {
     
     @objc func searchByFishName() {
         
-        let searchNameViewController = SearchNameViewController()
+//        let searchNameViewController = SearchNameViewController()
+//        self.navigationController?.pushViewController(searchNameViewController, animated: true)
         
-        self.navigationController?.pushViewController(searchNameViewController, animated: true)
+        let outputTableViewController = OutputTableViewController()
+    
+        self.navigationController?.pushViewController(outputTableViewController, animated: true)
     
     }
     

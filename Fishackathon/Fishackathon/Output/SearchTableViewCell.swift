@@ -12,19 +12,43 @@ class SearchTableViewCell: UITableViewCell, Identifiable {
 
     // MARK: Property
     
+    @IBOutlet weak var searchTextField: UITextField!
+    
     class var identifier: String { return String(describing: self) }
     
     static let height: CGFloat = 44.0
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        setUp()
+        
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    // MARK: Init
 
-        // Configure the view for the selected state
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+        setUp()
+
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+
+        setUp()
+
+    }
+    
+    // MARK: Set Up
+    
+    private func setUp() {
+        
+        self.contentView.backgroundColor = UIColor.blue
+        print("OO\(SearchTableViewCell.identifier)")
+//        searchTextField.backgroundColor = .white
+        
     }
     
 }
