@@ -28,6 +28,7 @@
 		1FFFAA9E202558ED005F447F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFAA9D202558ED005F447F /* Assets.xcassets */; };
 		1FFFAAA1202558ED005F447F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFAA9F202558ED005F447F /* LaunchScreen.storyboard */; };
 		379A044120255D9A00BC307B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 379A044020255D9A00BC307B /* GoogleService-Info.plist */; };
+		37F3C3722025A95B00E3D338 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37F3C3712025A95B00E3D338 /* GoogleService-Info.plist */; };
 		5F0FFC13202585BF00AE8D2F /* TabBarItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC10202585BE00AE8D2F /* TabBarItemType.swift */; };
 		5F0FFC14202585BF00AE8D2F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC11202585BE00AE8D2F /* TabBarController.swift */; };
 		5F0FFC15202585BF00AE8D2F /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC12202585BE00AE8D2F /* TabBarItem.swift */; };
@@ -61,6 +62,7 @@
 		1FFFAAA2202558ED005F447F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D6E39777433863E8293C74E /* Pods-Fishackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fishackathon/Pods-Fishackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		379A044020255D9A00BC307B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		37F3C3712025A95B00E3D338 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5F0FFC10202585BE00AE8D2F /* TabBarItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItemType.swift; sourceTree = "<group>"; };
 		5F0FFC11202585BE00AE8D2F /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		5F0FFC12202585BE00AE8D2F /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				5F0FFC162025880F00AE8D2F /* Input */,
 				5F0FFC0F2025856600AE8D2F /* Tab Bar */,
 				1FE1B8A4202566D800C79F7B /* GoogleService-Info.plist */,
+				37F3C3712025A95B00E3D338 /* GoogleService-Info.plist */,
 				1FE1B8B920258CDC00C79F7B /* Library */,
 				1FFFAA93202558ED005F447F /* AppDelegate.swift */,
 				1FE1B8BA2025A68D00C79F7B /* ChartViewController.swift */,
@@ -265,6 +268,7 @@
 				1FFFAA99202558ED005F447F /* Main.storyboard in Resources */,
 				1FE1B8B420258B0500C79F7B /* PossibleFishesViewController.xib in Resources */,
 				1FE1B8A5202566D800C79F7B /* GoogleService-Info.plist in Resources */,
+				37F3C3722025A95B00E3D338 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

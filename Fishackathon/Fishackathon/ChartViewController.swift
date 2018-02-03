@@ -27,8 +27,12 @@ class ChartViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PriceChartTableViewCell", for: indexPath) as! PriceChartTableViewCell
-        cell.scatterChart.delegate = self
+        cell.priceChart.delegate = self
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.view.bounds.height/2
     }
     
     
