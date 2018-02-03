@@ -16,11 +16,17 @@ import CoreGraphics
 open class Renderer: NSObject
 {
     /// the component that handles the drawing area of the chart and it's offsets
-    @objc open let viewPortHandler: ViewPortHandler
-
-    @objc public init(viewPortHandler: ViewPortHandler)
+    @objc open var viewPortHandler: ViewPortHandler?
+    
+    public override init()
     {
-        self.viewPortHandler = viewPortHandler
         super.init()
     }
+    
+    @objc public init(viewPortHandler: ViewPortHandler?)
+    {
+        super.init()
+        self.viewPortHandler = viewPortHandler
+    }
 }
+        

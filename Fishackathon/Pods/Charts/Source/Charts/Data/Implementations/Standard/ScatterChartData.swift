@@ -37,9 +37,14 @@ open class ScatterChartData: BarLineScatterCandleBubbleChartData
             {
                 print("ScatterChartData: Found a DataSet which is not a ScatterChartDataSet", terminator: "\n")
             }
-            else if let size = scatterDataSet?.scatterShapeSize, size > max
+            else
             {
-                max = size
+                let size = scatterDataSet!.scatterShapeSize
+                
+                if size > max
+                {
+                    max = size
+                }
             }
         }
         

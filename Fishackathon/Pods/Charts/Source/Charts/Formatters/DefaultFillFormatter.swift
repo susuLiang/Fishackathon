@@ -26,7 +26,10 @@ open class DefaultFillFormatter: NSObject, IFillFormatter
     
     @objc open var block: Block?
     
-    public override init() { }
+    public override init()
+    {
+        
+    }
     
     @objc public init(block: @escaping Block)
     {
@@ -42,21 +45,47 @@ open class DefaultFillFormatter: NSObject, IFillFormatter
         dataSet: ILineChartDataSet,
         dataProvider: LineChartDataProvider) -> CGFloat
     {
-        guard block == nil else { return block!(dataSet, dataProvider) }
-        var fillMin: CGFloat = 0.0
-
-        if dataSet.yMax > 0.0 && dataSet.yMin < 0.0
+        if block != nil
         {
-            fillMin = 0.0
+            return block!(dataSet, dataProvider)
         }
-        else if let data = dataProvider.data
+        else
         {
-            let max = data.yMax > 0.0 ? 0.0 : dataProvider.chartYMax
-            let min = data.yMin < 0.0 ? 0.0 : dataProvider.chartYMin
-
-            fillMin = CGFloat(dataSet.yMin >= 0.0 ? min : max)
+            var fillMin = CGFloat(0.0)
+            
+            if dataSet.yMax > 0.0 && dataSet.yMin < 0.0
+            {
+                fillMin = 0.0
+            }
+            else
+            {
+                if let data = dataProvider.data
+                {
+                    var max: Double, min: Double
+                    
+                    if data.yMax > 0.0
+                    {
+                        max = 0.0
+                    }
+                    else
+                    {
+                        max = dataProvider.chartYMax
+                    }
+                    
+                    if data.yMin < 0.0
+                    {
+                        min = 0.0
+                    }
+                    else
+                    {
+                        min = dataProvider.chartYMin
+                    }
+                    
+                    fillMin = CGFloat(dataSet.yMin >= 0.0 ? min : max)
+                }
+            }
+            
+            return fillMin
         }
-
-        return fillMin
     }
 }
