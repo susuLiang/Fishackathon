@@ -97,7 +97,6 @@ class SearchNameViewController: UIViewController {
                 
             })
             
-            
         }
         
     }
@@ -120,6 +119,5 @@ extension SearchNameViewController: UITableViewDelegate, UITableViewDataSource, 
         return self.chartTableView.bounds.height
     }
 
-    
 }
 

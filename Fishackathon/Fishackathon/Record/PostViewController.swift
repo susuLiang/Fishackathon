@@ -15,19 +15,13 @@ import Firebase
 class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate{
     
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var priceTextField: UITextField!
-    
     @IBOutlet weak var locationTextField: UITextField!
-    
     @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var pickerImageView: UIImageView!
-    
     @IBOutlet weak var addPhotoButton: UIButton!
-    
     @IBOutlet weak var fishCommonName: UITextField!
    
-    
     let imagePicker = UIImagePickerController()
     var locationManager:CLLocationManager!
     var location: CLLocation?

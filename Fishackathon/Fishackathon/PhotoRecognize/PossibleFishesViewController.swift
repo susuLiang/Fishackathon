@@ -58,10 +58,7 @@ class PossibleFishesViewController: UIViewController {
     
     func processClassifications(for request: VNRequest, error: Error?) {
         DispatchQueue.main.async {
-            guard let results = request.results else {
-                //                self.classificationLabel.text = "Unable to classify image.\n\(error!.localizedDescription)"
-                return
-            }
+            guard let results = request.results else { return }
             let classifications = results as! [VNClassificationObservation]
             
             if !classifications.isEmpty {
@@ -69,7 +66,7 @@ class PossibleFishesViewController: UIViewController {
                 let topClassifications = classifications.prefix(3)
                 let descriptions = topClassifications.map { classification in
                     // Formats the classification for display; e.g. "(0.37) cliff, drop, drop-off".
-                    return String(format: "  (%.2f) %@", classification.confidence, classification.identifier)
+                    return classification.identifier
                 }
                 self.possibleName = descriptions
                 self.tableView.reloadData()
@@ -91,9 +88,6 @@ class PossibleFishesViewController: UIViewController {
             }
         }
     }
-
-
-
 }
 
 extension PossibleFishesViewController: UITableViewDelegate, UITableViewDataSource {
@@ -114,7 +108,6 @@ extension PossibleFishesViewController: UITableViewDelegate, UITableViewDataSour
         if possibleName.count > 0 {
             cell.scientificName.text = possibleName[indexPath.row]
         }
-        
         return cell
     }
     
