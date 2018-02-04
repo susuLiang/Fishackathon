@@ -411,9 +411,10 @@ open class SearchTextField: UITextField {
     
     fileprivate func filter(forceShowAll addAll: Bool) {
         clearResults()
-        
-        if text!.characters.count < minCharactersNumberToStartFiltering {
-            return
+//        DispatchQueue.main.async {
+            if text!.characters.count < self.minCharactersNumberToStartFiltering {
+                return
+//            }
         }
         
         for i in 0 ..< filterDataSource.count {
@@ -458,8 +459,9 @@ open class SearchTextField: UITextField {
                 }
             }
         }
-        
-        tableView?.reloadData()
+        DispatchQueue.main.async {
+            self.tableView?.reloadData()
+        }
         
         if inlineMode {
             handleInlineFiltering()
@@ -469,7 +471,9 @@ open class SearchTextField: UITextField {
     // Clean filtered results
     fileprivate func clearResults() {
         filteredResults.removeAll()
-        tableView?.removeFromSuperview()
+        DispatchQueue.main.async {
+            self.tableView?.removeFromSuperview()
+        }
     }
     
     // Look for Font attribute, and if it exists, adapt to the subtitle font size
@@ -531,14 +535,16 @@ open class SearchTextField: UITextField {
 
 extension SearchTextField: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tableView.isHidden = !interactedWith || (filteredResults.count == 0)
-        shadowView?.isHidden = !interactedWith || (filteredResults.count == 0)
-        
-        if maxNumberOfResults > 0 {
-            return min(filteredResults.count, maxNumberOfResults)
-        } else {
-            return filteredResults.count
-        }
+//        DispatchQueue.main.async {
+            tableView.isHidden = !interactedWith || (self.filteredResults.count == 0)
+            self.shadowView?.isHidden = !interactedWith || (self.filteredResults.count == 0)
+            
+            if maxNumberOfResults > 0 {
+                return min(filteredResults.count, maxNumberOfResults)
+            } else {
+                return filteredResults.count
+            }
+//        }
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

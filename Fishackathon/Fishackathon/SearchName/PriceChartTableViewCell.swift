@@ -16,17 +16,20 @@ class PriceChartTableViewCell: UITableViewCell {
     
     @IBOutlet weak var priceChart: CombinedChartView!
     
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    var unitsSoldmax = [19.0, 20.0, 15.2, 17.0, 12.0, 11.5, 20.2, 16.0,11.0,15.0, 6.0, 17.0]
+    var unitsSold = [12.0, 15.0, 13.2, 14.0, 9.5, 10.5, 17.2, 15,9.0,11.0, 12.0, 13.0]
+    var unitsSoldmin = [8.0, 6.0, 7.2, 9.0, 9.0, 7.5, 13.2, 12.0,7.0,10.0, 9.0, 12.0]
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-
-        let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
         
         // Set X-Axis to show Month
         priceChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:months)
         priceChart.xAxis.granularity = 1
+        priceChart.setScaleMinima(1, scaleY: 0.3)
         
-        setChart(xValues: months, yValuesLineChart: unitsSold, yValuesBarChart: unitsSold)
+        setChart(xValues: months, yValuesLineChart: unitsSold, yValuesMinBarChart: unitsSold, yValuesMaxBarChart: unitsSoldmax)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -34,7 +37,7 @@ class PriceChartTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-    func setChart(xValues: [String], yValuesLineChart: [Double], yValuesBarChart: [Double]) {
+    func setChart(xValues: [String], yValuesLineChart: [Double], yValuesMinBarChart: [Double], yValuesMaxBarChart: [Double]) {
         priceChart.noDataText = "No data for this species of fish"
         
         var yVals1 : [ChartDataEntry] = [ChartDataEntry]()
@@ -46,15 +49,15 @@ class PriceChartTableViewCell: UITableViewCell {
         
         for i in 0..<xValues.count {
             
-            yVals1.append(ChartDataEntry(x: Double(i), y: Double(i)))
-            yVals2.append(BarChartDataEntry(x: Double(i), y: Double(i+1)))
-            yVals3.append(BarChartDataEntry(x: Double(i), y: Double(i-1)))
+            yVals1.append(ChartDataEntry(x: Double(i), y: Double(yValuesLineChart[i])))
+            yVals2.append(BarChartDataEntry(x: Double(i), y: Double(yValuesMaxBarChart[i])))
+            yVals3.append(BarChartDataEntry(x: Double(i), y: Double(yValuesMinBarChart[i])))
             
         }
         
         let averageLineChartSet = LineChartDataSet(values: yVals1, label: "Average Price")
         averageLineChartSet.colors = [UIColor.blue]
-        averageLineChartSet.lineWidth = 5.0
+        averageLineChartSet.lineWidth = 2.0
         averageLineChartSet.drawCirclesEnabled = false
         
         let maxBarChartSet: BarChartDataSet = BarChartDataSet(values: yVals2, label: "Max Price")
@@ -63,7 +66,7 @@ class PriceChartTableViewCell: UITableViewCell {
         maxBarChartSet.barShadowColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0)
         let minBarChartSet: BarChartDataSet = BarChartDataSet(values: yVals3, label: "Min Price")
         minBarChartSet.barBorderWidth = 0.3
-        minBarChartSet.colors = [UIColor.green]
+        minBarChartSet.colors = [UIColor.white]
         minBarChartSet.barShadowColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0)
         
         
@@ -72,7 +75,7 @@ class PriceChartTableViewCell: UITableViewCell {
         data.barData = BarChartData(dataSets: [maxBarChartSet,minBarChartSet])
         data.lineData = LineChartData(dataSet: averageLineChartSet)
         priceChart.data = data
-        priceChart.backgroundColor = UIColor.brown
+        priceChart.backgroundColor = UIColor.clear
         priceChart.animate(xAxisDuration: 1.0, yAxisDuration: 1.0, easingOption: .easeInCirc)
         priceChart.highlightPerTapEnabled = false
 

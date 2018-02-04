@@ -64,7 +64,10 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     var allFishNames: [String]? = nil {
         didSet {
-            configureFishNameTextField()
+            DispatchQueue.main.async {
+                self.configureFishNameTextField()
+
+            }
         }
     }
     func getAllFishesCommonNames() {

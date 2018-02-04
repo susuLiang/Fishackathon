@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-struct SellData{
+struct SellData: Codable {
     let userName: String
     let sellPrice: Double
     let time: String
     let fishCommonName: String
     let fishImgUrl: String
     
-    init( userName: String, sellPrice: Double, time: String, fishCommonName: String, fishImgUrl: String) {
+    init(userName: String, sellPrice: Double, time: String, fishCommonName: String, fishImgUrl: String) {
         self.userName = userName
         self.sellPrice = sellPrice
         self.time = time

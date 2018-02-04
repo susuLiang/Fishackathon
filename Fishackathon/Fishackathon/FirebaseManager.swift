@@ -29,18 +29,20 @@ class FirebaseManager {
     }
 
     func getAllFishesCommonNames(completion: @escaping ([String]?, Error?) -> Void) {
-        Database.database().reference().child("nameCorrespond").observe(.value) { (snapshot: DataSnapshot) in
+        Database.database().reference().child("nameCorrespond").observe(.value) {
+                (snapshot: DataSnapshot) in
+            DispatchQueue.global().async {
+                var fishCommonNames: [String] = []
             
-            var fishCommonNames: [String] = []
-            
-            if let objects = snapshot.value as? [String: String] {
-                for fishCommonName in objects.keys {
-                    fishCommonNames.append(fishCommonName)
+                if let objects = snapshot.value as? [String: String] {
+                    for fishCommonName in objects.keys {
+                        fishCommonNames.append(fishCommonName)
+                    }
                 }
+                completion(fishCommonNames, nil)
+                }
+                completion(nil, FirebaseError.cantGetData)
             }
-            completion(fishCommonNames, nil)
-        }
-        completion(nil, FirebaseError.cantGetData)
     }
     
     func getFishesCorrespondCommonName(fishScientificName: String, completion: @escaping (String?, Error?) -> Void) {
@@ -56,13 +58,35 @@ class FirebaseManager {
     }
     
     func getFishRecords(fishCommonName: String, completion: @escaping ([SellData]?, Error?) -> Void) {
-        Database.database().reference().child("DealRecord").queryOrdered(byChild: "fishCommonName").queryEqual(toValue: fishCommonName).observeSingleEvent(of: .value) { (snapshot: DataSnapshot) in
-            print(snapshot)
-            if let objects = snapshot.value as? [String: String] {
-                print(objects)
+        print(fishCommonName)
+        Database.database().reference().child("DealRecord")
+            .queryOrdered(byChild: "fishCommonName")
+            .queryEqual(toValue: fishCommonName)
+//            .queryEqual(toValue: "Almoloya cichlid", childKey: "fishCommonName")
+            .observeSingleEvent(of: .value) { (snapshot: DataSnapshot) in
+            print(snapshot.value)
+            
+            
+            if let objects = snapshot.value as? [String: Any] {
+//                for object in objects {
+                var sellDatas: [SellData] = []
+                    for (key, new) in objects {
+                        print("key:", key)
+                        guard let value = new as? [String: Any]
+                            else { return }
+                        let commonName = value["fishCommonName"] as! String
+                        let fishImg = value["fishImg"] as! String
+                        let sellPrice = value["sellPrice"] as! Double
+                        let time = value["time"] as! String
+                        let userName = value["userName"] as! String
+                        let data = SellData(userName: userName, sellPrice: sellPrice, time: time, fishCommonName: commonName, fishImgUrl: fishImg)
+                        sellDatas.append(data)
+                    }
+                    completion(sellDatas, nil)
+                }
                 //                let fishCommonName = objects.keys
                 //                completion(fishCommonName, nil)
-            }
+//            }
         }
         completion(nil, FirebaseError.cantGetData)
     }

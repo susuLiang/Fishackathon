@@ -114,7 +114,7 @@ extension PossibleFishesViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let searchNameViewController = SearchNameViewController()
         searchNameViewController.photoRecognizeName = possibleName[indexPath.row]
-        self.navigationController?.pushViewController(searchNameViewController, animated: true)
+    self.navigationController?.pushViewController(searchNameViewController, animated: true)
     }
 
 }
