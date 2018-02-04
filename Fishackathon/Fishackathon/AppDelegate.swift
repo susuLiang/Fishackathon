@@ -19,7 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        UINavigationBar.appearance().barTintColor = UIColor(displayP3Red: 19/255.0, green: 50/255.0, blue: 87/255.0, alpha: 0.86)
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         FirebaseApp.configure()
+        
+        UIApplication.shared.statusBarStyle = .lightContent
         
         IQKeyboardManager.sharedManager().enable = true
         

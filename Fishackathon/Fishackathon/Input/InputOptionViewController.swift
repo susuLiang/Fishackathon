@@ -28,8 +28,8 @@ class InputOptionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setup()
+        setUpButtonAppearence()
+        setupButtonAction()
         
     }
     
@@ -46,7 +46,14 @@ class InputOptionViewController: UIViewController {
     
     // MARK: Setup
     
-    func setup() {
+    func setUpButtonAppearence() {
+        fishNameButton.layer.cornerRadius = 5
+        fishNameButton.clipsToBounds = true
+        fishPictureButton.layer.cornerRadius = 5
+        fishPictureButton.clipsToBounds = true
+    }
+    
+    func setupButtonAction() {
         
         fishNameButton.addTarget(self, action: #selector(searchByFishName), for: .touchUpInside)
         
@@ -65,6 +72,7 @@ class InputOptionViewController: UIViewController {
         fusuma.delegate = self
         fusuma.cropHeightRatio = 0.8
         fusuma.allowMultipleSelection = false
+
         self.present(fusuma, animated: true, completion: nil)
     }
     

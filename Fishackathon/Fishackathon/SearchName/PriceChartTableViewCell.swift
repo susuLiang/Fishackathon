@@ -56,18 +56,19 @@ class PriceChartTableViewCell: UITableViewCell {
         }
         
         let averageLineChartSet = LineChartDataSet(values: yVals1, label: "Average Price")
-        averageLineChartSet.colors = [UIColor.blue]
-        averageLineChartSet.lineWidth = 2.0
+        averageLineChartSet.colors = [UIColor(displayP3Red: 224/255.0, green: 241/255.0, blue: 187/255.0, alpha: 1)]
+        averageLineChartSet.lineWidth = 5.0
         averageLineChartSet.drawCirclesEnabled = false
         
         let maxBarChartSet: BarChartDataSet = BarChartDataSet(values: yVals2, label: "Max Price")
         maxBarChartSet.barBorderWidth = 0.3
-        maxBarChartSet.colors = [UIColor.red]
-        maxBarChartSet.barShadowColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0)
+        maxBarChartSet.colors = [UIColor(displayP3Red: 43/255.0, green: 158/255.0, blue: 179/255.0, alpha: 1)]
+//        maxBarChartSet.barShadowColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0)
+        
         let minBarChartSet: BarChartDataSet = BarChartDataSet(values: yVals3, label: "Min Price")
-        minBarChartSet.barBorderWidth = 0.3
-        minBarChartSet.colors = [UIColor.white]
-        minBarChartSet.barShadowColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0)
+//        minBarChartSet.barBorderWidth = 0.3
+        minBarChartSet.colors = [UIColor(displayP3Red: 230/255.0, green: 235/255.0, blue: 224/255.0, alpha: 1)]
+//        minBarChartSet.barShadowColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0)
         
         
         let data = CombinedChartData()
@@ -75,7 +76,7 @@ class PriceChartTableViewCell: UITableViewCell {
         data.barData = BarChartData(dataSets: [maxBarChartSet,minBarChartSet])
         data.lineData = LineChartData(dataSet: averageLineChartSet)
         priceChart.data = data
-        priceChart.backgroundColor = UIColor.clear
+        priceChart.backgroundColor = UIColor(displayP3Red: 230/255.0, green: 235/255.0, blue: 224/255.0, alpha: 1)
         priceChart.animate(xAxisDuration: 1.0, yAxisDuration: 1.0, easingOption: .easeInCirc)
         priceChart.highlightPerTapEnabled = false
 

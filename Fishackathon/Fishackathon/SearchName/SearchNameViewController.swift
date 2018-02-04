@@ -46,8 +46,7 @@ class SearchNameViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        commonNameString = fishNameSearchTextField.text
-        
+        self.navigationItem.title = NSLocalizedString("Possible Fish", comment: "")
         chartTableView.delegate = self
         chartTableView.dataSource = self
         fishNameSearchTextField.delegate = self
