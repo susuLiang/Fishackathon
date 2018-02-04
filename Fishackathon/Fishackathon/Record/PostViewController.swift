@@ -10,7 +10,7 @@ import UIKit
 import KeychainSwift
 import CoreLocation
 import Firebase
-
+import SearchTextField
 
 class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate{
     
@@ -20,7 +20,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var pickerImageView: UIImageView!
     @IBOutlet weak var addPhotoButton: UIButton!
-    @IBOutlet weak var fishCommonName: UITextField!
+    @IBOutlet weak var fishCommonName: SearchTextField!
    
     let imagePicker = UIImagePickerController()
     var locationManager:CLLocationManager!
@@ -42,6 +42,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
    
         timeTextField.addTarget(self, action: #selector(textFieldEditing), for: .editingDidBegin)
         nameTextField.text = keyChain.get("name")
+        getAllFishesCommonNames()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,6 +60,28 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             locationManager.startUpdatingLocation()
             //locationManager.startUpdatingHeading()
         }
+    }
+    
+    var allFishNames: [String]? = nil {
+        didSet {
+            configureFishNameTextField()
+        }
+    }
+    func getAllFishesCommonNames() {
+        FirebaseManager.shared.getAllFishesCommonNames { (data, error) in
+            self.allFishNames = data
+        }
+    }
+    
+    fileprivate func configureFishNameTextField() {
+        // Start visible even without user's interaction as soon as created - Default: false.V
+        fishCommonName.startVisibleWithoutInteraction = false
+        
+        // Set data source
+        if let allFishNames = self.allFishNames {
+            fishCommonName.filterStrings(allFishNames)
+        }
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

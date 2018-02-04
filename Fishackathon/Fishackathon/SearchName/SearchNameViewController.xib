@@ -22,26 +22,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acg-v2-l6c">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
-                    <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Eh-9S-bgS" customClass="SearchTextField" customModule="SearchTextField">
-                            <rect key="frame" x="37" y="34" width="300" height="30"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="300" id="1Up-SK-4to"/>
-                            </constraints>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                    </subviews>
-                    <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstItem="6Eh-9S-bgS" firstAttribute="leading" secondItem="acg-v2-l6c" secondAttribute="leading" constant="37" id="CFG-ZI-S6L"/>
-                        <constraint firstAttribute="trailing" secondItem="6Eh-9S-bgS" secondAttribute="trailing" constant="38" id="Jsg-eb-6MN"/>
-                        <constraint firstItem="6Eh-9S-bgS" firstAttribute="top" secondItem="acg-v2-l6c" secondAttribute="top" constant="34" id="nno-AB-HGA"/>
-                    </constraints>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OR9-Ti-PKG">
                     <rect key="frame" x="0.0" y="99" width="375" height="291"/>
                     <subviews>
@@ -145,20 +125,28 @@
                     <rect key="frame" x="0.0" y="390" width="375" height="277"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter fish name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Eh-9S-bgS" customClass="SearchTextField" customModule="SearchTextField">
+                    <rect key="frame" x="0.0" y="20" width="375" height="79"/>
+                    <color key="backgroundColor" red="0.1292402446" green="0.33759891990000002" blue="0.51620650290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="OR9-Ti-PKG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="19R-eF-hmo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="phH-Ic-FTb" secondAttribute="bottom" id="Erw-kK-hlo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OR9-Ti-PKG" secondAttribute="bottom" constant="277" id="FWy-aN-fCl"/>
-                <constraint firstItem="acg-v2-l6c" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FfT-0f-wbj"/>
-                <constraint firstItem="acg-v2-l6c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OqL-U0-jLF"/>
+                <constraint firstItem="6Eh-9S-bgS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FkD-Mt-GX3"/>
+                <constraint firstItem="OR9-Ti-PKG" firstAttribute="top" secondItem="6Eh-9S-bgS" secondAttribute="bottom" id="LKr-C2-zE3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="phH-Ic-FTb" secondAttribute="trailing" id="QtJ-fe-xsb"/>
-                <constraint firstItem="OR9-Ti-PKG" firstAttribute="top" secondItem="acg-v2-l6c" secondAttribute="bottom" id="S9T-5E-Qv3"/>
-                <constraint firstItem="acg-v2-l6c" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="U6H-nM-xSi"/>
                 <constraint firstItem="phH-Ic-FTb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Xs4-CA-vGn"/>
+                <constraint firstItem="6Eh-9S-bgS" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="anf-6H-CVo"/>
                 <constraint firstItem="OR9-Ti-PKG" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="m9r-Nm-nhY"/>
                 <constraint firstItem="phH-Ic-FTb" firstAttribute="top" secondItem="OR9-Ti-PKG" secondAttribute="bottom" id="rRs-lc-qtd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="6Eh-9S-bgS" secondAttribute="top" id="unb-1T-VZA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="32.5" y="71.5"/>

@@ -95,6 +95,11 @@ class SearchNameViewController: UIViewController {
                 
                 self.scientificName.text = data
                 
+                FirebaseManager.shared.getFishRecords(fishCommonName: data, completion: {(data, error) in
+                    print(data)
+                    
+                    })
+                
             })
             
         }

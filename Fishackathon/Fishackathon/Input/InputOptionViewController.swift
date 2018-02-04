@@ -29,9 +29,18 @@ class InputOptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.isHidden = true
-        
         setup()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
         
     }
     
@@ -88,7 +97,7 @@ extension InputOptionViewController: FusumaDelegate {
         possibleFishesViewController.photo.image = image
         DispatchQueue.main.async {
             self.navigationController?.pushViewController(possibleFishesViewController, animated: true)
-//            self.present(possibleFishesViewController, animated: false, completion: nil)
+            
         }
     }
     

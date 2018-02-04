@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0AAAE603FCF6BABE4C59F64D /* Pods_Fishackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8A3DD117D3B27E3C95777C /* Pods_Fishackathon.framework */; };
 		1F5476EF20265E0A0099924C /* fish.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1F5476EE20265E0A0099924C /* fish.mlmodel */; };
+		1F5476F1202666180099924C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F5476F0202666180099924C /* GoogleService-Info.plist */; };
 		1F7117D72025AA0600B1B3E1 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7117D62025AA0600B1B3E1 /* FirebaseManager.swift */; };
 		1FE1B8A9202572AD00C79F7B /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8A6202572AD00C79F7B /* SignInController.swift */; };
 		1FE1B8AA202572AD00C79F7B /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8A7202572AD00C79F7B /* SignUpController.swift */; };
@@ -22,13 +23,10 @@
 		1FE1B8BB2025A68D00C79F7B /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8BA2025A68D00C79F7B /* ChartViewController.swift */; };
 		1FE1B8BD2025A6AF00C79F7B /* PriceChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE1B8BC2025A6AF00C79F7B /* PriceChartTableViewCell.swift */; };
 		1FFFAA94202558ED005F447F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFAA93202558ED005F447F /* AppDelegate.swift */; };
-		1FFFAA96202558ED005F447F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFAA95202558ED005F447F /* ViewController.swift */; };
 		1FFFAA99202558ED005F447F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFAA97202558ED005F447F /* Main.storyboard */; };
 		1FFFAA9C202558ED005F447F /* Fishackathon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFAA9A202558ED005F447F /* Fishackathon.xcdatamodeld */; };
 		1FFFAA9E202558ED005F447F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFAA9D202558ED005F447F /* Assets.xcassets */; };
 		1FFFAAA1202558ED005F447F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFAA9F202558ED005F447F /* LaunchScreen.storyboard */; };
-		379A044120255D9A00BC307B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 379A044020255D9A00BC307B /* GoogleService-Info.plist */; };
-		37F3C3722025A95B00E3D338 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37F3C3712025A95B00E3D338 /* GoogleService-Info.plist */; };
 		5F0FFC13202585BF00AE8D2F /* TabBarItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC10202585BE00AE8D2F /* TabBarItemType.swift */; };
 		5F0FFC14202585BF00AE8D2F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC11202585BE00AE8D2F /* TabBarController.swift */; };
 		5F0FFC15202585BF00AE8D2F /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0FFC12202585BE00AE8D2F /* TabBarItem.swift */; };
@@ -40,12 +38,12 @@
 		5F0FFC44202600D300AE8D2F /* PriceChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F0FFC43202600D300AE8D2F /* PriceChartTableViewCell.xib */; };
 		6BE3AEFE20259DA4009ACBF1 /* PostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE3AEFD20259DA4009ACBF1 /* PostViewController.xib */; };
 		6BE3AF0020259E0C009ACBF1 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE3AEFF20259E0C009ACBF1 /* PostViewController.swift */; };
-		6BE3AF022025B8ED009ACBF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BE3AF012025B8ED009ACBF1 /* GoogleService-Info.plist */; };
 		6BE3AF052025DFBF009ACBF1 /* SellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE3AF042025DFBF009ACBF1 /* SellData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F5476EE20265E0A0099924C /* fish.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = fish.mlmodel; sourceTree = "<group>"; };
+		1F5476F0202666180099924C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1F7117D62025AA0600B1B3E1 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		1FE1B8A6202572AD00C79F7B /* SignInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		1FE1B8A7202572AD00C79F7B /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
@@ -60,15 +58,12 @@
 		1FE1B8BC2025A6AF00C79F7B /* PriceChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceChartTableViewCell.swift; sourceTree = "<group>"; };
 		1FFFAA90202558ED005F447F /* Fishackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fishackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFFAA93202558ED005F447F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1FFFAA95202558ED005F447F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1FFFAA98202558ED005F447F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FFFAA9B202558ED005F447F /* Fishackathon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fishackathon.xcdatamodel; sourceTree = "<group>"; };
 		1FFFAA9D202558ED005F447F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FFFAAA0202558ED005F447F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FFFAAA2202558ED005F447F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D6E39777433863E8293C74E /* Pods-Fishackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fishackathon/Pods-Fishackathon.debug.xcconfig"; sourceTree = "<group>"; };
-		379A044020255D9A00BC307B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		37F3C3712025A95B00E3D338 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5F0FFC10202585BE00AE8D2F /* TabBarItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItemType.swift; sourceTree = "<group>"; };
 		5F0FFC11202585BE00AE8D2F /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		5F0FFC12202585BE00AE8D2F /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
@@ -80,7 +75,6 @@
 		5F0FFC43202600D300AE8D2F /* PriceChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceChartTableViewCell.xib; sourceTree = "<group>"; };
 		6BE3AEFD20259DA4009ACBF1 /* PostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostViewController.xib; sourceTree = "<group>"; };
 		6BE3AEFF20259E0C009ACBF1 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		6BE3AF012025B8ED009ACBF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6BE3AF042025DFBF009ACBF1 /* SellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellData.swift; sourceTree = "<group>"; };
 		9B56B0ABF97968189F736CA0 /* Pods-Fishackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fishackathon/Pods-Fishackathon.release.xcconfig"; sourceTree = "<group>"; };
 		AC8A3DD117D3B27E3C95777C /* Pods_Fishackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fishackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,14 +139,12 @@
 				1FE1B8AC202584B400C79F7B /* PhotoRecognize */,
 				5F0FFC1B2025884C00AE8D2F /* Record */,
 				5F0FFC162025880F00AE8D2F /* Input */,
-				6BE3AF012025B8ED009ACBF1 /* GoogleService-Info.plist */,
 				5F0FFC0F2025856600AE8D2F /* Tab Bar */,
-				37F3C3712025A95B00E3D338 /* GoogleService-Info.plist */,
 				1FE1B8B920258CDC00C79F7B /* Library */,
 				1FFFAA93202558ED005F447F /* AppDelegate.swift */,
+				6BE3AF042025DFBF009ACBF1 /* SellData.swift */,
 				1FE1B8BA2025A68D00C79F7B /* ChartViewController.swift */,
 				1F7117D62025AA0600B1B3E1 /* FirebaseManager.swift */,
-				1FFFAA95202558ED005F447F /* ViewController.swift */,
 				1FFFAA97202558ED005F447F /* Main.storyboard */,
 				1FE1B8A8202572AD00C79F7B /* LoginController.swift */,
 				1FE1B8A6202572AD00C79F7B /* SignInController.swift */,
@@ -160,9 +152,8 @@
 				1FFFAA9D202558ED005F447F /* Assets.xcassets */,
 				1FFFAA9F202558ED005F447F /* LaunchScreen.storyboard */,
 				1FFFAAA2202558ED005F447F /* Info.plist */,
-				379A044020255D9A00BC307B /* GoogleService-Info.plist */,
+				1F5476F0202666180099924C /* GoogleService-Info.plist */,
 				1FFFAA9A202558ED005F447F /* Fishackathon.xcdatamodeld */,
-				6BE3AF042025DFBF009ACBF1 /* SellData.swift */,
 			);
 			path = Fishackathon;
 			sourceTree = "<group>";
@@ -287,16 +278,14 @@
 			files = (
 				1FFFAAA1202558ED005F447F /* LaunchScreen.storyboard in Resources */,
 				1FE1B8B02025855F00C79F7B /* PossibleFishesCell.xib in Resources */,
-				379A044120255D9A00BC307B /* GoogleService-Info.plist in Resources */,
 				6BE3AEFE20259DA4009ACBF1 /* PostViewController.xib in Resources */,
 				1FFFAA9E202558ED005F447F /* Assets.xcassets in Resources */,
 				5F0FFC382025C09700AE8D2F /* SearchNameViewController.xib in Resources */,
 				5F0FFC1A2025883200AE8D2F /* InputOptionViewController.xib in Resources */,
 				1FFFAA99202558ED005F447F /* Main.storyboard in Resources */,
-				6BE3AF022025B8ED009ACBF1 /* GoogleService-Info.plist in Resources */,
 				5F0FFC44202600D300AE8D2F /* PriceChartTableViewCell.xib in Resources */,
 				1FE1B8B420258B0500C79F7B /* PossibleFishesViewController.xib in Resources */,
-				37F3C3722025A95B00E3D338 /* GoogleService-Info.plist in Resources */,
+				1F5476F1202666180099924C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +388,6 @@
 				6BE3AF052025DFBF009ACBF1 /* SellData.swift in Sources */,
 				1F5476EF20265E0A0099924C /* fish.mlmodel in Sources */,
 				1FE1B8BD2025A6AF00C79F7B /* PriceChartTableViewCell.swift in Sources */,
-				1FFFAA96202558ED005F447F /* ViewController.swift in Sources */,
 				1FE1B8A9202572AD00C79F7B /* SignInController.swift in Sources */,
 				6BE3AF0020259E0C009ACBF1 /* PostViewController.swift in Sources */,
 				1FFFAA94202558ED005F447F /* AppDelegate.swift in Sources */,

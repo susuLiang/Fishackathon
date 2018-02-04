@@ -28,7 +28,6 @@ class FirebaseManager {
         completion(nil, FirebaseError.cantGetData)
     }
 
-    
     func getAllFishesCommonNames(completion: @escaping ([String]?, Error?) -> Void) {
         Database.database().reference().child("nameCorrespond").observe(.value) { (snapshot: DataSnapshot) in
             
@@ -43,6 +42,31 @@ class FirebaseManager {
         }
         completion(nil, FirebaseError.cantGetData)
     }
+    
+    func getFishesCorrespondCommonName(fishScientificName: String, completion: @escaping (String?, Error?) -> Void) {
+        Database.database().reference().queryOrdered(byChild: "nameCorrespond").queryEqual(toValue: fishScientificName).observeSingleEvent(of: .value) { (snapshot) in
+            print(snapshot)
+            if let objects = snapshot.value as? [String: String] {
+                print(objects)
+//                let fishCommonName = objects.keys
+//                completion(fishCommonName, nil)
+            }
+        }
+        completion(nil, FirebaseError.cantGetData)
+    }
+    
+    func getFishRecords(fishCommonName: String, completion: @escaping ([SellData]?, Error?) -> Void) {
+        Database.database().reference().child("DealRecord").queryOrdered(byChild: "fishCommonName").queryEqual(toValue: fishCommonName).observeSingleEvent(of: .value) { (snapshot: DataSnapshot) in
+            print(snapshot)
+            if let objects = snapshot.value as? [String: String] {
+                print(objects)
+                //                let fishCommonName = objects.keys
+                //                completion(fishCommonName, nil)
+            }
+        }
+        completion(nil, FirebaseError.cantGetData)
+    }
+
 
 }
 
