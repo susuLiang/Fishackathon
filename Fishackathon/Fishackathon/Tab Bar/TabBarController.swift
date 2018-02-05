@@ -38,6 +38,7 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
 
         setupTabBar()
+        self.tabBar.barTintColor = .white
         
     }
     

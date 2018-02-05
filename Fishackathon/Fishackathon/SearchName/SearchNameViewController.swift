@@ -1,3 +1,4 @@
+
 //
 //  SearchNameViewController.swift
 //  Fishackathon
@@ -10,13 +11,15 @@ import UIKit
 import SearchTextField
 import Charts
 
-class SearchNameViewController: UIViewController {
+class SearchNameViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Properties
     
     var allFishNames: [String]? = nil {
         didSet {
-            configureFishNameTextField()
+            DispatchQueue.main.async {
+                self.configureFishNameTextField()
+            }
         }
     }
     
@@ -26,13 +29,27 @@ class SearchNameViewController: UIViewController {
     
     @IBOutlet weak var chartTableView: UITableView!
     
+    var datas:[SellData] = []
+    
     var photoRecognizeName: String?
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        FirebaseManager.shared.getFishRecords(fishCommonName: textField.text!) { [weak self](data, error) in
+            if error == nil {
+                self?.datas = data!
+                self?.chartTableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = NSLocalizedString("Possible Fish", comment: "")
         chartTableView.delegate = self
         chartTableView.dataSource = self
+        fishNameSearchTextField.delegate = self
         
         setup()
         getAllFishesCommonNames()
@@ -43,6 +60,9 @@ class SearchNameViewController: UIViewController {
         super.viewWillAppear(animated)
         if let name = photoRecognizeName {
             scientificName.text = name
+            FirebaseManager.shared.getFishRecords(fishCommonName: photoRecognizeName!) { [weak self] (data, error)  in
+
+            }
         }
     }
     
@@ -95,10 +115,10 @@ class SearchNameViewController: UIViewController {
                 
                 self.scientificName.text = data
                 
-                FirebaseManager.shared.getFishRecords(fishCommonName: data, completion: {(data, error) in
-                    print(data)
-                    
-                    })
+//                FirebaseManager.shared.getFishRecords(fishCommonName: data, completion: {(data, error) in
+//                    print(data)
+//
+//                    })
                 
             })
             
@@ -117,6 +137,14 @@ extension SearchNameViewController: UITableViewDelegate, UITableViewDataSource, 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PriceChartTableViewCell", for: indexPath) as! PriceChartTableViewCell
         cell.priceChart.delegate = self
+        let diceRoll = Int(arc4random_uniform(12))
+        var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        cell.unitsSold = []
+//        for _ in 0..<self.datas.count {
+//            cell.unitsSold.append(self.datas[indexPath.row].sellPrice)
+//            cell.months.append(months[diceRoll-1])
+//        }
+//        cell.setChart(xValues: cell.months, yValuesLineChart: cell.unitsSold, yValuesBarChart: cell.unitsSold)
         return cell
     }
 

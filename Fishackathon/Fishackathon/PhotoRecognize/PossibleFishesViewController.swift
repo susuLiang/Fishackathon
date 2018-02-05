@@ -16,19 +16,20 @@ class PossibleFishesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var photo: UIImageView!
     
-    @IBAction func back(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        self.navigationItem.title = NSLocalizedString("Possible Fish", comment: "")
         tableView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableView.tableFooterView = UIView()
         self.view.addSubview(tableView)
         setupTableCell()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {
@@ -114,7 +115,7 @@ extension PossibleFishesViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let searchNameViewController = SearchNameViewController()
         searchNameViewController.photoRecognizeName = possibleName[indexPath.row]
-        self.navigationController?.pushViewController(searchNameViewController, animated: true)
+    self.navigationController?.pushViewController(searchNameViewController, animated: true)
     }
 
 }
